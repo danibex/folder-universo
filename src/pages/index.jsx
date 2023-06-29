@@ -36,9 +36,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [painel, setPainel] = useState(false);
-  const [mostrar, setMostrar] = useState(false)
-  function alternarMostrar(alterar) {
-    setMostrar(alterar)
+  const [mostrarTalento, setMostrarTalento] = useState(false)
+  function alternarMostrarTalento(alterar) {
+    setMostrarTalento(alterar)
+  }
+  const [mostrarHistorico, setMostrarHistorico] = useState(false)
+  function alternarMostrarHistorico(alterar) {
+    setMostrarHistorico(alterar)
   }
   function alternarPainel(alternar) {
     setPainel(alternar);
@@ -65,30 +69,131 @@ export default function Home() {
         </div>
       </div>
       
-      
-      
+      <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
+          <Swiper
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={10}
+            navigation
+            breakpoints={Breakpoints}
+            loop={true}
+            autoplay={{
+              delay: 333000,
+              disableOnInteraction: false
+            }}
+          >
+            <div className="w-[100%] flex justify-center items-center">
+              <div className="w-[100%] flex items-center justify-center">
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Histórico</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/professoraMarlene.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    No ano de 2006, acompanhando as novas práticas educacionais, a UNIVERSO iniciou o seu programa para a oferta de disciplinas e cursos na modalidade de Educação a Distância. A universidade, após o seu credenciamento para oferta de cursos superiores nesta modalidade, através da Portaria MEC nº 1.672 de 5 de outubro de 2006, publicada no DOU de 9 de outubro de 2006, 
+                    <button onClick={() => alternarMostrarHistorico(true)} className={`${mostrarHistorico ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarHistorico ? "flex ":"hidden "}`}> implantou o Departamento de Educação a Distância, ministrando cursos de graduação e de pós-graduação lato sensu. O recredenciamento para oferta de cursos superiores nesta modalidade foi concedido pela Portaria MEC nº 1.627 de 19 de setembro de 2019, publicada no DOU de 23 de setembro de 2019. Atualmente a UNIVERSO conta com dezenas de polos de apoio presencial, implantados e em implantação, distribuídos pelo território nacional, ofertando cursos de graduação – incluindo licenciaturas, bacharelados e superiores de tecnologia – e de especialização. Ainda no ano de 2006, a UNIVERSO obteve o reconhecimento de seus primeiros cursos de pós-graduação stricto sensu, a nível de Mestrado, através da Portaria MEC nº 2.000 de 20 de dezembro de 2006, publicada no DOU de 21 de dezembro de 2006. Foram iniciadas, portanto, as atividades dos Programas de Pós-Graduação em Ciências da Atividade Física, História e Psicologia. O Doutorado em Psicologia foi reconhecido pela Portaria MEC nº 1.331 de 8 de novembro de 2012, publicada no DOU de 9 de novembro de 2012, e o de História pela Portaria MEC nº 816 de 4 de julho de 2017, publicada no DOU de 5 de julho de 2017. O último reconhecimento de todos os programas de pós-graduação stricto sensu – mestrados e doutorados – dinamizados pela UNIVERSO foi obtido a partir da Portaria MEC nº 609, de 14 de março de 2019, publicada no DOU de 18 de março de 2019.</p>
+                    <button onClick={() => alternarMostrarHistorico(false)} className={`${mostrarHistorico ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
+                    </p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Missão</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/jovensEstudando.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                      O Centro Universitário UNIVERSO Salvador tem a missão de promover a formação integral do homem, dando oportunidade de educação para todos, fundamentada em valores éticos e morais e compromissada com as responsabilidades sociais da comunidade na qual se insere.
+                    </p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
 
 
-      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
-      flex flex-col justify-center items-center
-      shadow-xl
-      `}>
-      <div className='w-full'>
-        <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Projeto Talento Empresas</h2>
-      </div>
-        <Image className='rounded-2xl' src="/img/reuniaoExecutiva.png" width={500} height={300}/>
-        <div className={`mt-5`}>
-          <p className={`font-medium text-justify`}>
-          O mercado de trabalho atual é bastante competitivo, porém muitos trabalhadores não possuem uma formação adequada. Ao mesmo tempo, sabemos que a formação superior dos funcionários é um excelente investimento para uma empresa. 
-Pensando nisso, o Centro Universitário Universo Salvador criou o Projeto Talento Empresa, para contribuir com a formação superior de seus colaboradores. Com ele, seus funcionários e
-          <button onClick={() => alternarMostrar(true)} className={`${mostrar ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrar ? "flex ":"hidden "}`}> dependentes terão a oportunidade de fazer um curso de nível superior e garantir desconto na mensalidade do primeiro ao último período, em um dos cursos de graduação da UNIVERSO.
-Com esta ação estamos cumprindo nossa função social  enquanto instituição filantrópica e sua empresa, sem dúvidas, terá funcionários mais motivados, qualificados e produtivos ao alcançarem o sonho da graduação proporcionado por nossa parceria. Portanto, o convênio com o Centro Universitário Universo Salvador proporcionará um notório aperfeiçoamento profissional de seus funcionários, e certamente trará ótimos frutos à empresa.</p>
-<button onClick={() => alternarMostrar(false)} className={`${mostrar ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
-          </p>
-          <div className='flex justify-center items-center'>
-          </div>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Visão</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/pessoasTrabalhando.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    O Centro Universo Salvador tem como visão o reconhecimento de seus profissionais egressos por suas habilidades empreendedoras, liderança, pensamento crítico, conhecimento regional e internacional, busca contínua por conhecimento, compromisso com programas sociais, valores éticos e morais, sustentabilidade, habilidades em tecnologia, inclusão social e defesa da democracia e liberdades fundamentais.
+                    </p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Valores</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/pessoasTrabalhando.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    O Centro Universitário UNIVERSO Salvador tem como base de sua gestão e formação profissional valores éticos, morais, fraternos, de igualdade, liberdade e sustentabilidade. Busca constantemente alcançar a excelência acadêmica em todas as áreas de atuação, com uma visão inovadora e aberta a novas oportunidades.        </p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+
+
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Projeto Talento Empresas</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/reuniaoExecutiva.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    O mercado de trabalho atual é bastante competitivo, porém muitos trabalhadores não possuem uma formação adequada. Ao mesmo tempo, sabemos que a formação superior dos funcionários é um excelente investimento para uma empresa. 
+                    Pensando nisso, o Centro Universitário Universo Salvador criou o Projeto Talento Empresa, para contribuir com a formação superior de seus colaboradores. Com ele, seus funcionários e
+                    <button onClick={() => alternarMostrarTalento(true)} className={`${mostrarTalento ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarTalento ? "flex ":"hidden "}`}> dependentes terão a oportunidade de fazer um curso de nível superior e garantir desconto na mensalidade do primeiro ao último período, em um dos cursos de graduação da UNIVERSO.
+                    Com esta ação estamos cumprindo nossa função social  enquanto instituição filantrópica e sua empresa, sem dúvidas, terá funcionários mais motivados, qualificados e produtivos ao alcançarem o sonho da graduação proporcionado por nossa parceria. Portanto, o convênio com o Centro Universitário Universo Salvador proporcionará um notório aperfeiçoamento profissional de seus funcionários, e certamente trará ótimos frutos à empresa.</p>
+                    <button onClick={() => alternarMostrarTalento(false)} className={`${mostrarTalento ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
+                    </p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+              </div>
+            </div>
+          </Swiper>
         </div>
-      </div>
+        
 {/*  */}
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center
