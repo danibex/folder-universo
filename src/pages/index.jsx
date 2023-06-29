@@ -19,16 +19,16 @@ const Breakpoints = {
     slidesPerView: 1,
   },
   500: {
-    slidesPerView: 2,
+    slidesPerView: 1,
   },
   790: {
-    slidesPerView: 3,
+    slidesPerView: 1,
   },
   1024: {
-    slidesPerView: 4,
+    slidesPerView: 1,
   },
   1480: {
-    slidesPerView: 5,
+    slidesPerView: 1,
   },
 };
 
@@ -222,7 +222,7 @@ export default function Home() {
                   
                   <div href="/" className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
                     <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
-                    <iframe className='w-[330px] h-[400px] mt-3 rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.1379445407847!2d-38.47409963075295!3d-12.99104614562687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b47bf14dcdd%3A0x2750cc44b55f2a9c!2sUniverso%20Universidade%20Salgado%20de%20Oliveira%2C%20Universo%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1688062011381!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe className='w-[330px] h-[400px] mt-3 rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.1379445407847!2d-38.47409963075295!3d-12.99104614562687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b47bf14dcdd%3A0x2750cc44b55f2a9c!2sUniverso%20Universidade%20Salgado%20de%20Oliveira%2C%20Universo%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1688062011381!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
                       <div className='flex flex-col justify-center items-center mb-5'>
                       <IconMapPinFilled className='text-red-600 mt-2' size={35}/>
                       <div className="text-xl font-normal text-center mt-4">Uma das melhores localizações de Salvador</div>
@@ -629,8 +629,11 @@ export default function Home() {
       </div>
 
 
-      <div className='h-[3000px] justify-end items-end'>
-       
+      <div className='flex flex-col justify-center items-center mt-12 mb-4 bg-white rounded-lg w-full'>
+            <h2 className='text-2xl font-medium text-red-800 my-2'>Conheça a Universo</h2>
+            <div className='w-[100%] flex items-center justify-center h-[500px]'>
+            <iframe className='w-[95%] rounded-xl' src="https://www.google.com/maps/embed?pb=!4v1688080871566!6m8!1m7!1sygg2Z07BHRxAATtJsaeydA!2m2!1d-12.99088101123758!2d-38.47368803922593!3f108.58364738203365!4f12.835446976038071!5f0.4000000000000002" height='450px' loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
       </div>
     </div>
   </MenuNavegacao>

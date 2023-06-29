@@ -23,14 +23,16 @@ export default function MenuNavegacao(props) {
       `}>
         <div className='flex flex-row justify-between items-center w-[100%] md:w-auto'>
           <Link href="/"><Image alt="" width={80} height={80} src="/img/Universo.png"/></Link>
-          <div className='md:hidden flex mr-5'>
-            <button onClick={() => { toggleMenu() }}>{toggle ? <IconX size={40} /> : <IconMenu2 size={40} />}</button>
+          <div className=''>
+           {/*  <button onClick={() => { toggleMenu() }}>{toggle ? <IconX size={40} /> : <IconMenu2 size={40} />}</button> */}
+              <Link className='w-[70px] h-[70px] md:w-auto p-2
+               my-2 md:my-0 bg-blue-400 hover:bg-blue-500 active:bg-blue-600  rounded-lg text-white font-medium mx-1 flex flex-row justify-center items-center
+              ' href="/"><IconHome2 size={35} className='mr-1' /></Link>
           </div>
         </div>
         <div className={`${toggle ? "flex" : "hidden"} w-[100%] flex-col md:flex md:flex-row justify-center items-center`}>
           <div className='w-[100%] flex flex-col md:flex-row justify-center items-center'>
             <div className='w-[100%] flex flex-col md:flex-row my-3 justify-center items-center'>
-              <Link className='w-[100%] md:w-auto flex justify-center items-center' href="/"><BotaoMenu><IconHome2 className='mr-1' />Início</BotaoMenu></Link>
               <Link className='w-[100%] md:w-auto flex justify-center items-center' href="/vocacional"><BotaoMenu><IconCertificate className='mr-1' />Presenciais</BotaoMenu></Link>
               <Link className='w-[100%] md:w-auto flex justify-center items-center' href="/blog"><BotaoMenu><IconNews className='mr-1' />EAD</BotaoMenu></Link>
             </div>
