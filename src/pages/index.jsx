@@ -44,6 +44,14 @@ export default function Home() {
   function alternarMostrarHistorico(alterar) {
     setMostrarHistorico(alterar)
   }
+  const [mostrarObjetivo, setMostrarObjetivo] = useState(false)
+  function alterarMostrarObjetivo(alterar) {
+    setMostrarObjetivo(alterar)
+  }
+  const [mostrarBaseLegal, setMostrarBaseLegal] = useState(false)
+  function alternarMostrarBaseLegal(alterar){
+    setMostrarBaseLegal(alterar)
+  }
   function alternarPainel(alternar) {
     setPainel(alternar);
   }
@@ -52,20 +60,20 @@ export default function Home() {
     <div className={`
     h-full w-full flex flex-col items-center bg-gradient-to-r from-blue-200 to-red-300
     `}>
-      <Image className='mt-5' style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}} src="/img/centroUniversoSalvador.png" width={350} height={50}/>
+      
 
 
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center
-      shadow-xl
+      shadow-xl mb-14
       `}>
         <Image className='rounded-2xl' src="/img/videoApresentacao.gif" width={500} height={300}/>
         <div className={`mt-5`}>
-          <p className={`font-semibold `}>
+          <div className={`font-semibold `}>
                <p className='text-xl text-blue-500 italic'>“Não somos meros espectadores da história que vai passando aleatoriamente sem nossa interferência.”</p>
                 <p className='text-lg text-right text-blue-500'>Ana Maria Freire</p>
                 <p className='text-right text-blue-400'>Utopia e Democratização na educação Cidadã</p>
-          </p>
+          </div>
         </div>
       </div>
       
@@ -77,7 +85,7 @@ export default function Home() {
             breakpoints={Breakpoints}
             loop={true}
             autoplay={{
-              delay: 333000,
+              delay: 2500,
               disableOnInteraction: false
             }}
           >
@@ -96,9 +104,9 @@ export default function Home() {
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
                     No ano de 2006, acompanhando as novas práticas educacionais, a UNIVERSO iniciou o seu programa para a oferta de disciplinas e cursos na modalidade de Educação a Distância. A universidade, após o seu credenciamento para oferta de cursos superiores nesta modalidade, através da Portaria MEC nº 1.672 de 5 de outubro de 2006, publicada no DOU de 9 de outubro de 2006, 
-                    <button onClick={() => alternarMostrarHistorico(true)} className={`${mostrarHistorico ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarHistorico ? "flex ":"hidden "}`}> implantou o Departamento de Educação a Distância, ministrando cursos de graduação e de pós-graduação lato sensu. O recredenciamento para oferta de cursos superiores nesta modalidade foi concedido pela Portaria MEC nº 1.627 de 19 de setembro de 2019, publicada no DOU de 23 de setembro de 2019. Atualmente a UNIVERSO conta com dezenas de polos de apoio presencial, implantados e em implantação, distribuídos pelo território nacional, ofertando cursos de graduação – incluindo licenciaturas, bacharelados e superiores de tecnologia – e de especialização. Ainda no ano de 2006, a UNIVERSO obteve o reconhecimento de seus primeiros cursos de pós-graduação stricto sensu, a nível de Mestrado, através da Portaria MEC nº 2.000 de 20 de dezembro de 2006, publicada no DOU de 21 de dezembro de 2006. Foram iniciadas, portanto, as atividades dos Programas de Pós-Graduação em Ciências da Atividade Física, História e Psicologia. O Doutorado em Psicologia foi reconhecido pela Portaria MEC nº 1.331 de 8 de novembro de 2012, publicada no DOU de 9 de novembro de 2012, e o de História pela Portaria MEC nº 816 de 4 de julho de 2017, publicada no DOU de 5 de julho de 2017. O último reconhecimento de todos os programas de pós-graduação stricto sensu – mestrados e doutorados – dinamizados pela UNIVERSO foi obtido a partir da Portaria MEC nº 609, de 14 de março de 2019, publicada no DOU de 18 de março de 2019.</p>
+                    </p><button onClick={() => alternarMostrarHistorico(true)} className={`${mostrarHistorico ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarHistorico ? "flex ":"hidden "}`}> implantou o Departamento de Educação a Distância, ministrando cursos de graduação e de pós-graduação lato sensu. O recredenciamento para oferta de cursos superiores nesta modalidade foi concedido pela Portaria MEC nº 1.627 de 19 de setembro de 2019, publicada no DOU de 23 de setembro de 2019. Atualmente a UNIVERSO conta com dezenas de polos de apoio presencial, implantados e em implantação, distribuídos pelo território nacional, ofertando cursos de graduação – incluindo licenciaturas, bacharelados e superiores de tecnologia – e de especialização. Ainda no ano de 2006, a UNIVERSO obteve o reconhecimento de seus primeiros cursos de pós-graduação stricto sensu, a nível de Mestrado, através da Portaria MEC nº 2.000 de 20 de dezembro de 2006, publicada no DOU de 21 de dezembro de 2006. Foram iniciadas, portanto, as atividades dos Programas de Pós-Graduação em Ciências da Atividade Física, História e Psicologia. O Doutorado em Psicologia foi reconhecido pela Portaria MEC nº 1.331 de 8 de novembro de 2012, publicada no DOU de 9 de novembro de 2012, e o de História pela Portaria MEC nº 816 de 4 de julho de 2017, publicada no DOU de 5 de julho de 2017. O último reconhecimento de todos os programas de pós-graduação stricto sensu – mestrados e doutorados – dinamizados pela UNIVERSO foi obtido a partir da Portaria MEC nº 609, de 14 de março de 2019, publicada no DOU de 18 de março de 2019.</p>
                     <button onClick={() => alternarMostrarHistorico(false)} className={`${mostrarHistorico ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
-                    </p>
+                    
                     <div className='flex justify-center items-center'>
                     </div>
                     </div>
@@ -153,10 +161,42 @@ export default function Home() {
                     <div className='w-full'>
                     <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Valores</h2>
                     </div>
-                    <Image className='rounded-2xl' src="/img/pessoasTrabalhando.png" width={500} height={300}/>
+                    <Image className='rounded-2xl' src="/img/excelenciaAcademica.png" width={500} height={300}/>
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
-                    O Centro Universitário UNIVERSO Salvador tem como base de sua gestão e formação profissional valores éticos, morais, fraternos, de igualdade, liberdade e sustentabilidade. Busca constantemente alcançar a excelência acadêmica em todas as áreas de atuação, com uma visão inovadora e aberta a novas oportunidades.        </p>
+                    O Centro Universitário UNIVERSO Salvador tem como base de sua gestão e formação profissional, valores éticos, morais, fraternos, de igualdade, liberdade e sustentabilidade. Busca constantemente alcançar a excelência acadêmica em todas as áreas de atuação, com uma visão inovadora e aberta a novas oportunidades.</p>
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Objetivo</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/mulherDeNegocios.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    Assumir o compromisso com a formação de profissionais cidadãos efetivamente engajados com as especificidades inerentes ao campo de atuação profissional e com a dimensão social circundante, respeitando os princípios éticos, os valores e visões de mundo que constituem a cultura local dos grupos e/ou comunidades atendidos. 
+Com base neste objetivo, </p><button onClick={() => alterarMostrarObjetivo(true)} className={`${mostrarObjetivo ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarObjetivo ? "flex ":"hidden "}`}> a instituição dinamiza as atividades pedagógicas integrando o ensino, a pesquisa e a extensão através de um eixo axiológico que concebe o processo ensino aprendizagem como um locus que deve ser capaz de promover a articulação das dimensões constitutivas das relações humanas no mundo contemporâneo através da(o): 
+ Presença do pluralismo cultural,
+Primazia do bem comum, 
+ Diálogo multidisciplinar,
+ Respeito e acesso a educação para todos, 
+ Espírito de fraternidade e solidariedade, 
+ Preocupação constante com os novos desafios sociais, 
+ Exercício pleno da cidadania e o 
+ Reconhecimento da alteridade. 
+</p>
+                    <button onClick={() => alterarMostrarObjetivo(false)} className={`${mostrarObjetivo ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
+
+                    
                     <div className='flex justify-center items-center'>
                     </div>
                     </div>
@@ -178,11 +218,36 @@ export default function Home() {
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
                     O mercado de trabalho atual é bastante competitivo, porém muitos trabalhadores não possuem uma formação adequada. Ao mesmo tempo, sabemos que a formação superior dos funcionários é um excelente investimento para uma empresa. 
-                    Pensando nisso, o Centro Universitário Universo Salvador criou o Projeto Talento Empresa, para contribuir com a formação superior de seus colaboradores. Com ele, seus funcionários e
+                    Pensando nisso, o Centro Universitário Universo Salvador criou o Projeto Talento Empresa, para contribuir com a formação superior de seus colaboradores. Com ele, seus funcionários e </p>
                     <button onClick={() => alternarMostrarTalento(true)} className={`${mostrarTalento ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarTalento ? "flex ":"hidden "}`}> dependentes terão a oportunidade de fazer um curso de nível superior e garantir desconto na mensalidade do primeiro ao último período, em um dos cursos de graduação da UNIVERSO.
                     Com esta ação estamos cumprindo nossa função social  enquanto instituição filantrópica e sua empresa, sem dúvidas, terá funcionários mais motivados, qualificados e produtivos ao alcançarem o sonho da graduação proporcionado por nossa parceria. Portanto, o convênio com o Centro Universitário Universo Salvador proporcionará um notório aperfeiçoamento profissional de seus funcionários, e certamente trará ótimos frutos à empresa.</p>
                     <button onClick={() => alternarMostrarTalento(false)} className={`${mostrarTalento ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
-                    </p>
+                    
+                    <div className='flex justify-center items-center'>
+                    </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+
+
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+                    flex flex-col justify-center items-center
+                    shadow-xl
+                    `}>
+                    <div className='w-full'>
+                    <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Base Legal</h2>
+                    </div>
+                    <Image className='rounded-2xl' src="/img/mapaBrasil.png" width={500} height={300}/>
+                    <div className={`mt-5`}>
+                    <p className={`font-medium text-justify`}>
+                    A UNIVERSO é uma instituição de ensino superior presente nas cidades de Salvador, Recife, Goiânia, Belo Horizonte, Juiz de Fora, Niterói, São Gonçalo, Itaipu e Campos (RJ). Em Salvador oferece cursos de graduação de licenciatura, bacharelado e superiores de tecnologia.
+O Centro Universitário UNIVERSO Salvador foi credenciado </p>
+                    <button onClick={() => alternarMostrarBaseLegal(true)} className={`${mostrarBaseLegal ? "hidden" : "flex"} ml-2 underline text-blue-700 text-lg text-center`}>Ler mais...</button><p className={`${mostrarBaseLegal ? "flex ":"hidden "}`}>  a partir da transformação do campus Salvador da Universidade Salgado de Oliveira (UNIVERSO). Em função do Termo de Conciliação firmado entre a ASOEC e a União em 06/11/2007, foi protocolado processo de desmembramento dessa unidade do conjunto que compunha a UNIVERSO, tornando-se, ao final do fluxo processual, o Centro Universitário UNIVERSO Salvador, através da Portaria MEC nº 2020 de 21/11/2019, publicada no Diário Oficial da União de 25/11/2019.
+</p>
+                    <button onClick={() => alternarMostrarBaseLegal(false)} className={`${mostrarBaseLegal ? "flex" : "hidden"} ml-2 underline text-blue-700 text-lg text-center`}>Ler menos</button>
+                    
                     <div className='flex justify-center items-center'>
                     </div>
                     </div>
@@ -197,7 +262,7 @@ export default function Home() {
 {/*  */}
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center
-      shadow-xl
+      shadow-xl mb-14
       `}>
       <div className='w-full'>
         <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Atrativos</h2>
@@ -212,7 +277,7 @@ export default function Home() {
             breakpoints={Breakpoints}
             loop={true}
             autoplay={{
-              delay: 333000,
+              delay: 1750,
               disableOnInteraction: false
             }}
           >
@@ -379,7 +444,7 @@ export default function Home() {
       </div>
 {/*  */}
 
-<div className={`bg-white w-full mt-5 shadow-xl`}>
+<div className={`bg-white w-full mt-5 shadow-xl mb-14`}>
         <h2 className={`text-center text-4xl font-medium text-red-700 my-5`}>Nossos Cursos</h2>
         <div className='flex justify-center items-center mb-5'>
         <div className="w-[295px] flex items-center justify-center border p-0 border-blue-500 bg-slate-100 rounded-full">
@@ -417,7 +482,7 @@ export default function Home() {
             loop={true}
             navigation
             autoplay={{
-              delay: 99000,
+              delay: 1500,
               disableOnInteraction: false
             }}
           >
@@ -526,7 +591,7 @@ export default function Home() {
             loop={false }
             navigation
             autoplay={{
-              delay: 99000,
+              delay: 1500,
               disableOnInteraction: false
             }}
           >
@@ -632,7 +697,7 @@ export default function Home() {
       <div className='flex flex-col justify-center items-center mt-12 mb-4 bg-white rounded-lg w-full'>
             <h2 className='text-2xl font-medium text-red-800 my-2'>Conheça a Universo</h2>
             <div className='w-[100%] flex items-center justify-center h-[500px]'>
-            <iframe className='w-[95%] rounded-xl' src="https://www.google.com/maps/embed?pb=!4v1688080871566!6m8!1m7!1sygg2Z07BHRxAATtJsaeydA!2m2!1d-12.99088101123758!2d-38.47368803922593!3f108.58364738203365!4f12.835446976038071!5f0.4000000000000002" height='450px' loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe className='w-[95%] rounded-xl' src="https://www.google.com/maps/embed?pb=!4v1688080871566!6m8!1m7!1sygg2Z07BHRxAATtJsaeydA!2m2!1d-12.99088101123758!2d-38.47368803922593!3f108.58364738203365!4f12.835446976038071!5f0.4000000000000002" height='450px'></iframe>
             </div>
       </div>
     </div>

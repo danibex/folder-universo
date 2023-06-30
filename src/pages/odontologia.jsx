@@ -35,10 +35,10 @@ export default function odontologia() {
         </div>
         <div className="border flex flex-col w-[100%] bg-white rounded-xl mb-8">
             <div className={`w-[100%] p-4 flex flex-col md:flex-row justify-around items-center bg-green-400 rounded-t-xl`}>
-                <button className={`w-[80%] md:w-auto font-medium active:shadow-none hover:text-white hover:bg-blue-500 text-blue-500 bg-white my-2 py-2 px-4 rounded-full shadow-xl text-base`}>Sobre</button>
+                <button className={`w-[80%] md:w-auto font-medium active:shadow-none text-white bg-blue-500  my-2 py-2 px-4 rounded-full shadow-xl text-base`}>Sobre</button>
             </div>
             <div className={``}>
-                <div className={`${activeSection == "sobre" ? "flex" : "hidden"} p-2 flex justify-center items-center`}>
+                <div className={`p-2 flex justify-center items-center`}>
                     <p className="text-justify font-medium">O curso de Odontologia tem como fundamentação as atuais necessidades sociais, os avanços humanísticos, científicos e tecnológicos. Preconiza recentes recomendações dos órgãos nacionais e internacionais de saúde dos núcleos e associações de ensino odontológico e atua segundo estas. O curso tem uma estruturação curricular e um projeto didático-pedagógico desenvolvido em dois núcleos: o Núcleo Profissional de Saúde com Formação Humanística e o Núcleo Odontológico.</p>
                 </div>
             </div>
