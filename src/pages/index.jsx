@@ -13,7 +13,8 @@ import 'swiper/css/autoplay';
 import Link from "next/link";
 import MenuNavegacao from '@/components/Menu/MenuNavegacao';
 import { useState } from 'react';
-
+import Formulario from '@/components/Formulario';
+import LogoWhatsapp from "@/components/LogoWhatsapp"
 const Breakpoints = {
   0: {
     slidesPerView: 1,
@@ -77,16 +78,17 @@ export default function Home() {
         </div>
       </div>
       
+      <Formulario/>
+
       <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={10}
-            navigation
             breakpoints={Breakpoints}
             loop={true}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false
+              disableOnInteraction: true
             }}
           >
             <div className="w-[100%] flex justify-center items-center">
@@ -265,6 +267,70 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
       shadow-xl mb-14
       `}>
       <div className='w-full'>
+        <h2 className='font-medium text-center text-2xl mb-4 ml-2'>Galeria</h2>
+      </div>
+      {/* 
+
+       */}
+        <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
+          <Swiper
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={10}
+            breakpoints={Breakpoints}
+            loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: true
+            }}
+          >
+            <div className="w-[100%] flex justify-center items-center">
+              <div className="w-[100%] flex items-center justify-center">
+              
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia1.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia2.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia3.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia4.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia5.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia6.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia7.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia8.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia9.jpg" width={400} height={400}/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia10.jpg" width={400} height={400}/>
+                </SwiperSlide>
+
+              </div>
+            </div>
+          </Swiper>
+        </div>
+
+      </div>
+{/*  */}
+
+{/* */}
+      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+      flex flex-col justify-center items-center
+      shadow-xl mb-14
+      `}>
+      <div className='w-full'>
         <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Atrativos</h2>
       </div>
       {/* 
@@ -285,7 +351,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
               <div className="w-[100%] flex items-center justify-center">
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   
-                  <div href="/" className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                  <div className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
                     <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
                     <iframe className='w-[330px] h-[400px] mt-3 rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.1379445407847!2d-38.47409963075295!3d-12.99104614562687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b47bf14dcdd%3A0x2750cc44b55f2a9c!2sUniverso%20Universidade%20Salgado%20de%20Oliveira%2C%20Universo%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1688062011381!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
                       <div className='flex flex-col justify-center items-center mb-5'>
@@ -701,6 +767,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             </div>
       </div>
     </div>
+    <LogoWhatsapp/>
   </MenuNavegacao>
   )
 }
