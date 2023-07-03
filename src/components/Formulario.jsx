@@ -18,12 +18,10 @@ export default function Formulario() {
                         <input type="text" placeholder="Telefone"
                         className={`p-2 m-2 rounded-2xl`}
                         />
-                        <label className={`text-center text-lg font-semibold`}>Modalidade</label>
                         <select className={`p-2 m-2 rounded-2xl text-center`}>
                             <option value="Presencial">Presencial</option>
                             <option value="EAD">EAD</option>
                         </select>
-                        <label className={`text-center text-lg font-semibold`}>Curso</label>
                         <select className={`p-2 m-2 rounded-2xl text-center`}>
                             <option value="Presencial">Direito</option>
                             <option value="Psicologia">Psicologia</option>
@@ -31,11 +29,7 @@ export default function Formulario() {
                             <option value="Biomedicina">Biomedicina</option>
                             <option value="Fisioterapia">Fisioterapia</option>
                         </select>
-                        <label className={`text-center text-lg font-semibold`}>Empresa Parceira</label>
-                        <select className={`p-2 m-2 rounded-2xl text-center`}>
-                            <option value="Empresa1">Empresa1</option>
-                            <option value="Empresa2">Empresa2</option>
-                        </select>
+                        <input value="" placeholder="Empresa Parceira (Opcional)" type='text' className={`p-2 m-2 rounded-2xl`}/>
                         <div className="w-[100%] flex justify-center items-center">
                             <button onClick={(e) => {e.preventDefault()}} className="shadow-xl active:shadow-none px-4 py-2 my-2 text-xl flex justify-center items-center w-[60%] rounded-2xl bg-red-600 text-white font-medium mx-1">
                             <IconRocket size={40} className="mr-1"/>
