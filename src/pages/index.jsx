@@ -509,8 +509,8 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
 
       </div>
 {/*  */}
-
-<div className={`bg-white w-full mt-5 shadow-xl mb-14`}>
+<div className={`bg-white w-full mt-5 shadow-xl mb-14 relative`}>
+<Image src="/img/clique1.gif" className='absolute top-60 right-24 z-10' width={90} height={90}/>
         <h2 className={`text-center text-4xl font-medium text-red-700 my-5`}>Nossos Cursos</h2>
         <div className='flex justify-center items-center mb-5'>
         <div className="w-[295px] flex items-center justify-center border p-0 border-blue-500 bg-slate-100 rounded-full">
