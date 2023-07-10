@@ -15,6 +15,7 @@ import MenuNavegacao from '@/components/Menu/MenuNavegacao';
 import { useState } from 'react';
 import Formulario from '@/components/Formulario';
 import LogoWhatsapp from "@/components/LogoWhatsapp"
+import CardCurso from '@/components/CardCurso';
 const Breakpoints = {
   0: {
     slidesPerView: 1,
@@ -59,7 +60,7 @@ export default function Home() {
   return (
   <MenuNavegacao>
     <div className={`
-    h-full w-full flex flex-col items-center bg-gradient-to-r from-blue-200 to-red-300
+    h-full w-full flex flex-col items-center bg-[#054AA9]
     `}>
       
 
@@ -80,7 +81,7 @@ export default function Home() {
       
       <Formulario/>
 
-      <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
+      <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`} style={{fontFamily: "'Times New Roman', sans-serif"}}>
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={10}
@@ -556,7 +557,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
               <div className="w-[100%] flex items-center justify-center">
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   
-                  <Link href="/odontologia" className="justify-center items-center shadow-xl w-[250px]  h-[355px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                  <Link href="/direito" className="justify-center items-center shadow-xl w-[250px]  h-[355px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
                     <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[355px] w-[250px] shadow-lg">
                       <Image alt="" src="/img/curso/direito.png" width={250} height={250} className="rounded-t-lg"/>
                       <div className="text-2xl font-medium text-center mt-4">Direito</div>
@@ -589,7 +590,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                   </Link>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
+                  <Link href="/psicologia" className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
                       <Image alt="" src="/img/curso/psicologia.png" width={250} height={250} className="rounded-t-lg"/>
                       <div className="text-2xl font-medium text-center mt-4">Psicologia</div>
                         <div className='flex flex-col mt-4'>
@@ -600,10 +601,10 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
                           </div>
                         </div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
+                <Link href="/enfermagem" className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
                       <Image alt="" src="/img/curso/enfermagem.png" width={250} height={250} className="rounded-t-lg"/>
                       <div className="text-2xl font-medium text-center mt-4">Enfermagem</div>
                         <div className='flex flex-col mt-4'>
@@ -614,10 +615,10 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
                           </div>
                         </div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
+                <Link href="/biomedicina" className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
                       <Image alt="" src="/img/curso/biomedicina.png" width={250} height={250} className="rounded-t-lg"/>
                       <div className="text-2xl font-medium text-center mt-4">Biomedicina</div>
                         <div className='flex flex-col mt-4'>
@@ -628,10 +629,10 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
                           </div>
                         </div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
+                <Link href="/fisioterapia" className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
                       <Image alt="" src="/img/curso/fisioterapia.png" width={250} height={250} className="rounded-t-lg"/>
                       <div className="text-2xl font-medium text-center mt-4">Fisioterapia</div>
                         <div className='flex flex-col mt-4'>
@@ -642,7 +643,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
                           </div>
                         </div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
               </div>
             </div>
@@ -664,95 +665,179 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             <div className="w-[100%] flex justify-center items-center">
               <div className="w-[100%] flex items-center justify-center">
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <Link href="/odontologia" className="justify-center items-center shadow-xl w-[250px]  h-[355px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[355px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/direito.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">teste</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                  </Link>
+                  <CardCurso
+                    href="/administracao"
+                    nome_imagem="administracao"
+                    nome_curso="Administração"
+                    tempo="8 Semestres / 4 Anos"
+                    />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/ads"
+                    nome_imagem="ads"
+                    nome_curso="Análise e Desenvolvimento de Sistemas "
+                    tempo="5 Semestres / 2 Anos e Meio"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/biblioteconomia"
+                    nome_imagem="biblioteconomia"
+                    nome_curso="Biblioteconomia"
+                    tempo="6 Semestres / 3 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/cienciasBiologicas"
+                    nome_imagem="cienciasBiologicas"
+                    nome_curso="Ciências Biológicas"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/cienciasContabeis"
+                    nome_imagem="cienciasContabeis"
+                    nome_curso="Ciências Contábeis"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/engenhariaAgronomica"
+                    nome_imagem="engenhariaAgronomica"
+                    nome_curso="Engenharia Agronômica"
+                    tempo="10 Semestres / 5 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/engenhariaAmbiental"
+                    nome_imagem="engenhariaAmbiental"
+                    nome_curso="Engenharia Ambiental"
+                    tempo="10 Semestres / 5 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/direito"
+                    nome_imagem="direito"
+                    nome_curso="Testando"
+                    turno="Matutino / Noturno"
+                    tempo="8 Semestres / 4 Anos"
+                  />
+                </SwiperSlide>
 
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  <Link href="/odontologia" className="justify-center items-center shadow-xl w-[250px] h-[355px] bg-white flex flex-col border rounded-lg hover:opacity-80 active:opacity-70">
-                    <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/odontologia.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">Odontologia</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Diurno / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/psicologia.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">Psicologia</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/enfermagem.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">Enfermagem</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/biomedicina.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">Biomedicina</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <div className="rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[350px] w-[250px] shadow-lg">
-                      <Image alt="" src="/img/curso/fisioterapia.png" width={250} height={250} className="rounded-t-lg"/>
-                      <div className="text-2xl font-medium text-center mt-4">Fisioterapia</div>
-                        <div className='flex flex-col mt-4'>
-                          <div className='flex flex-row justify-center items-center'>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
-                          </div>
-                          <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
-                          </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
               </div>
             </div>
           </Swiper>
