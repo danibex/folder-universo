@@ -12,6 +12,12 @@ export default function leads() {
         console.log(data)
       })
   }, [])
+
+  function deletarLead(id) {
+    fetch(`api/leads?id=${id}`, {method: "DELETE"})
+      .then((response) => response.json)
+  }
+
   return (
     <div className='flex flex-col justify-center items-center'>
       <h1 className='my-4'>Leads</h1>
@@ -44,7 +50,7 @@ export default function leads() {
                   <td className='py-2 px-4 border border-black text-center'>{lead.data_inscricao.slice(0, 10)}</td>
                   <td className='py-2 px-4 border border-black text-center'>{lead.data_inscricao.slice(11, 16)}</td>
                   <td className='py-2 px-4 border border-black'>
-                     <button className=' border border-black mx-1 rounded-lg hover:bg-red-700 active:bg-red-800 bg-red-600 font-medium text-white py-1 px-2'><IconTrash size={18}/></button>
+                     <button onClick={() => {deletarLead(lead.id); window.location.reload();} } className=' border border-black mx-1 rounded-lg hover:bg-red-700 active:bg-red-800 bg-red-600 font-medium text-white py-1 px-2'><IconTrash size={18}/></button>
                   </td>
               </tr>
               )

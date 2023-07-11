@@ -3,7 +3,7 @@ import pool from '@/data/db';
 export default async function handler(req, res) { 
 
     const metodo = req.method; 
-
+    const idParam = req.query
     switch (metodo) {
       case "GET":
         const result = await pool.query('SELECT * FROM leads');
@@ -29,8 +29,16 @@ export default async function handler(req, res) {
         // Lógica para lidar com a requisição PUT (ou UPDATE)
         break;
       case "DELETE":
-        console.log("Tratando requisição DELETE");
-        // Lógica para lidar com a requisição DELETE
+        try{
+          const deleteRow = await pool.query(
+            'DELETE FROM leads WHERE id = $1;',
+            [parseInt(req.query.id)]
+          );
+          res.status(200).json(`Usuário id = ${parseInt(req.query.id)} deletado`)
+        } catch (error) {
+          console.error(error);
+          res.status(500).json({ message: 'Erro ao deletar usuário' });
+        }
         break;
       default:
         console.log("Método HTTP desconhecido");

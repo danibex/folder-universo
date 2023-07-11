@@ -4,13 +4,14 @@ import { Puff } from 'react-loader-spinner'
 import Image from 'next/image'
 import { IconX } from '@tabler/icons-react'
 export default function Formulario() {
+    const [modalidade, setModalidade] = useState("Presencial")
     const [carregando, setCarregando] = useState(false)
     const leadBase = {
         nome: "",
         email: "",
         telefone: "",
-        modalidade: "Presencial",
-        nome_curso: "Direito",
+        modalidade: modalidade,
+        nome_curso: "",
         empresa: ""
     }
     const [popUp, setPopUp] = useState(false)
@@ -53,11 +54,12 @@ export default function Formulario() {
         />
         <select 
         className={`p-2 m-2 rounded-2xl text-center`}
-        onChange={(e) => {setLead({...lead, modalidade: e.target.value})}}
+        onChange={(e) => {setLead({...lead, modalidade: e.target.value}); setModalidade(e.target.value)}}
         >
             <option value="Presencial">Presencial</option>
-            <option value="EAD">EAD</option>
+            <option value="EAD">EAD (Educação a Distância)</option>
         </select>
+        {modalidade == "Presencial" ?
         <select 
         className={`p-2 m-2 rounded-2xl text-center`}
         onChange={(e) => {setLead({...lead, nome_curso: e.target.value})}}
@@ -69,6 +71,35 @@ export default function Formulario() {
             <option value="Biomedicina">Biomedicina</option>
             <option value="Fisioterapia">Fisioterapia</option>
         </select>   
+        :
+        <select 
+        className={`p-2 m-2 rounded-2xl text-center`}
+        onChange={(e) => {setLead({...lead, nome_curso: e.target.value})}}
+        >
+          <option value="Administração">Administração</option>
+          <option value="Análise e Desenvolvimento de Sistemas">Análise e Desenvolvimento de Sistemas</option>
+          <option value="Biblioteconomia">Biblioteconomia</option>
+          <option value="Ciências Biológicas">Ciências Biológicas</option>
+          <option value="Ciências Contábeis">Ciências Contábeis</option>
+          <option value="Engenharia Agronômica">Engenharia Agronômica</option>
+          <option value="Engenharia Ambiental">Engenharia Ambiental</option>
+          <option value="Engenharia Civil">Engenharia Civil</option>
+          <option value="Engenharia de Produção">Engenharia de Produção</option>
+          <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+          <option value="Engenharia Mecânica">Engenharia Mecânica</option>
+          <option value="Fisioterapia">Fisioterapia</option>
+          <option value="FORDOC (Formação de Docentes)">FORDOC (Formação de Docentes)</option>
+          <option value="Gestão Ambiental">Gestão Ambiental</option>
+          <option value="Gestão de Recursos Humanos">Gestão de Recursos Humanos</option>
+          <option value="Gestão Financeira">Gestão Financeira</option>
+          <option value="Gestão Pública">Gestão Pública</option>
+          <option value="História">História</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Pedagogia">Pedagogia</option>
+          <option value="Serviço Social">Serviço Social</option>
+          <option value="Sistemas de Informação">Sistemas de Informação</option>
+        </select> 
+        }
         <input placeholder="Empresa Parceira (Opcional)" type='text' className={`p-2 m-2 rounded-2xl`}
         onChange={(e) => {setLead({...lead, empresa: e.target.value})}}
         />

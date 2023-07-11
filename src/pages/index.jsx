@@ -674,7 +674,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/ads"
+                    href="/"
                     nome_imagem="ads"
                     nome_curso="Análise e Desenvolvimento de Sistemas "
                     tempo="5 Semestres / 2 Anos e Meio"
@@ -682,7 +682,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/biblioteconomia"
+                    href="/"
                     nome_imagem="biblioteconomia"
                     nome_curso="Biblioteconomia"
                     tempo="6 Semestres / 3 Anos"
@@ -690,7 +690,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/cienciasBiologicas"
+                    href="/"
                     nome_imagem="cienciasBiologicas"
                     nome_curso="Ciências Biológicas"
                     tempo="8 Semestres / 4 Anos"
@@ -698,7 +698,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/cienciasContabeis"
+                    href="/"
                     nome_imagem="cienciasContabeis"
                     nome_curso="Ciências Contábeis"
                     tempo="8 Semestres / 4 Anos"
@@ -706,7 +706,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/engenhariaAgronomica"
+                    href="/"
                     nome_imagem="engenhariaAgronomica"
                     nome_curso="Engenharia Agronômica"
                     tempo="10 Semestres / 5 Anos"
@@ -714,7 +714,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/engenhariaAmbiental"
+                    href="/"
                     nome_imagem="engenhariaAmbiental"
                     nome_curso="Engenharia Ambiental"
                     tempo="10 Semestres / 5 Anos"
@@ -722,121 +722,125 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="engenhariaCivil"
+                    nome_curso="Engenharia Civil"
+                    tempo="10 SEMESTRES / 5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="engenhariaDeProducao"
+                    nome_curso="Engenharia de Produção"
+                    tempo="10 SEMESTRES / 5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="engenhariaEletrica"
+                    nome_curso="Engenharia Elétrica"
+                    tempo="10 SEMESTRES / 5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="engenhariaMecanica"
+                    nome_curso="Engenharia Mecânica"
+                    tempo="10 SEMESTRES / 5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="fisioterapia"
+                    nome_curso="Fisioterapia"
+                    tempo="10 SEMESTRES / 5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="docente"
+                    nome_curso="FORDOC (Formação de Docentes)"
+                    tempo="3 SEMESTRES / 1,5 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="gestaoAmbiental"
+                    nome_curso="Gestão Ambiental"
+                    tempo="4 SEMESTRES / 2 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="gestaoDeRecursosHumanos"
+                    nome_curso="Gestão de Recursos Humanos"
+                    tempo="4 SEMESTRES / 2 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="gestaoFinanceira"
+                    nome_curso="Gestão Financeira"
+                    tempo="4 SEMESTRES / 2 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="gestaoPublica"
+                    nome_curso="Gestão Pública"
+                    tempo="4 SEMESTRES / 2 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="historia"
+                    nome_curso="História"
+                    tempo="8 SEMESTRES / 4 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="marketing"
+                    nome_curso="Marketing"
+                    tempo="4 SEMESTRES / 2 ANOS"
                   />
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                   <CardCurso
-                    href="/direito"
-                    nome_imagem="direito"
-                    nome_curso="Testando"
-                    turno="Matutino / Noturno"
-                    tempo="8 Semestres / 4 Anos"
+                    href="/"
+                    nome_imagem="pedagogia"
+                    nome_curso="Pedagogia"
+                    tempo="8 SEMESTRES / 4 ANOS"
                   />
                 </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/"
+                    nome_imagem="servicoSocial"
+                    nome_curso="Serviço Social"
+                    tempo="8 SEMESTRES / 4 ANOS"
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  <CardCurso
+                    href="/"
+                    nome_imagem="si"
+                    nome_curso="Sistemas de Informação"
+                    tempo="8 SEMESTRES / 4 ANOS"
+                  />
+                </SwiperSlide>
+
 
               </div>
             </div>

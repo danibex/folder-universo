@@ -31,6 +31,7 @@ export default function MenuNavegacao(props) {
               ' href="/"><IconHome2 size={35} className='mr-1' /></Link> */}
           </div>
         </div>
+        {/**
         <div className={`${toggle ? "flex" : "hidden"} w-[100%] flex-col md:flex md:flex-row justify-center items-center`}>
           <div className='w-[100%] flex flex-col md:flex-row justify-center items-center'>
             <div className='w-[100%] flex flex-col md:flex-row my-3 justify-center items-center'>
@@ -40,6 +41,7 @@ export default function MenuNavegacao(props) {
             
           </div>
         </div>
+         */}
       </div>
 
       <div>
