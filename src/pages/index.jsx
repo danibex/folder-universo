@@ -69,7 +69,7 @@ export default function Home() {
       flex flex-col justify-center items-center
       shadow-xl mb-14
       `}>
-        <Image className='rounded-2xl' src="/img/videoApresentacao.gif" width={500} height={300}/>
+        <iframe className='w-[100%] h-[238px] rounded-xl' src="https://www.youtube.com/embed/2IT-c20XMuY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div className={`mt-5`}>
           <div className={`font-semibold `}>
                <p className='text-xl text-blue-500 italic'>“Não somos meros espectadores da história que vai passando aleatoriamente sem nossa interferência.”</p>
