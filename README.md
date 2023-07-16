@@ -45,11 +45,17 @@ Passo 3: Criar um banco de dados e uma tabela
    ```
 4. Crie uma tabela substituindo "nome_tabela" pelo nome desejado e defina as colunas necessárias:
    ```
-   CREATE TABLE nome_tabela (
-       coluna1 tipo_dado,
-       coluna2 tipo_dado,
-       ...
-   );
+CREATE TABLE leads (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(15),
+    modalidade VARCHAR(20),
+    curso VARCHAR(50),
+    empresa VARCHAR(100),
+    data_hora TIMESTAMPTZ DEFAULT timezone('America/Bahia'::text, now())
+);
+
    ```
    Substitua "coluna1", "coluna2", "tipo_dado" pelos nomes e tipos de dados corretos para suas colunas.
 
