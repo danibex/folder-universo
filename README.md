@@ -163,3 +163,50 @@ Primeiro, vamos verificar, com o comando nvm ls, quais versões do Node temos. D
 
 Versẽos do node.js
 A versão que está sendo apontada pela setinha verde é a padrão. Para você trocar para a versão 17, basta rodar o comando nvm use v17.7.0 e, a partir daí, você estará usando a versão 17 do Node.js.
+
+
+
+Peço desculpas pela omissão. Na configuração do Nginx, é necessário criar um link simbólico para o arquivo de configuração dentro da pasta `sites-enabled`. Aqui estão os passos completos para configurar o Nginx corretamente:
+
+1. Abra o arquivo de configuração padrão do Nginx para edição:
+   ```
+   sudo nano /etc/nginx/sites-available/default
+   ```
+
+2. Dentro do bloco `server`, remova todo o conteúdo e adicione o seguinte bloco de configuração:
+   ```nginx
+   server {
+       listen 80;
+       listen [::]:80;
+       server_name seu_dominio.com;  # Substitua pelo seu domínio ou endereço IP
+
+       location / {
+           proxy_pass http://localhost:3000;  # Porta na qual o PM2 está executando o Next.js
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+   }
+   ```
+   Substitua `seu_dominio.com` pelo seu domínio ou endereço IP da VPS.
+
+3. Salve o arquivo e saia do editor.
+
+4. Crie um link simbólico para o arquivo de configuração dentro da pasta `sites-enabled`:
+   ```
+   sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+   ```
+
+5. Verifique se a configuração do Nginx está correta:
+   ```
+   sudo nginx -t
+   ```
+
+6. Reinicie o Nginx para aplicar as alterações:
+   ```
+   sudo service nginx restart
+   ```
+
+Agora o Nginx está configurado corretamente para encaminhar as solicitações para o PM2, que está executando seu projeto Next.js. Certifique-se de substituir `seu_dominio.com` pelo seu domínio ou endereço IP da VPS.
