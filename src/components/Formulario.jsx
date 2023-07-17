@@ -126,7 +126,7 @@ export default function Formulario() {
     <div className={`${popUp ? "flex" : "hidden"} ease-in flex flex-col justify-center items-center z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 shadow-md rounded-xl text-center`}>
         <button onClick={() => setPopUp(false)} className='absolute top-2 right-2'><IconX /></button>
         <h2 className='my-4 text-4xl font-semibold'>Parabéns</h2>
-        <Image src="/check.gif" width={200} height={200}/>
+        <Image alt='Check' src="/check.gif" width={200} height={200}/>
         <p className='my-4 text-lg'>Inscrição realizada com sucesso</p>
     </div>
 </div>
