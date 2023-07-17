@@ -35,7 +35,7 @@ export default function Formulario() {
   return (
 <div className="shadow-xl mb-5 flex flex-col justify-center items-center rounded-xl w-[90%] md:w-[80%] bg-slate-200">
     <h1 className={`
-    bg-[#FFBB00]
+    bg-[#DB2C23]
     rounded-t-xl p-2 mt-0 w-[100%] flex justify-center items-center text-center
     text-4xl text-white font-semibold
     `} style={{fontFamily:"'Roboto Condensed', sans-serif"}}>Preencha Aqui<br/>e Garanta sua Bolsa <br/> Agora Mesmo!</h1> 
@@ -104,7 +104,7 @@ export default function Formulario() {
         onChange={(e) => {setLead({...lead, empresa: e.target.value})}}
         />
         <div className="w-[100%] flex justify-center items-center">
-            <button onClick={(e) => {e.preventDefault(); enviar() ; }} className="shadow-xl active:shadow-none px-4 py-2 my-2 text-xl flex justify-center items-center w-[60%] rounded-2xl bg-[#FFBB00] text-white font-medium mx-1">
+            <button onClick={(e) => {e.preventDefault(); enviar() ; }} className="shadow-xl active:shadow-none px-4 py-2 my-2 text-xl flex justify-center items-center w-[60%] rounded-2xl bg-[#DB2C23] text-white font-medium mx-1">
             {carregando ? 
             <Puff
             height="50"

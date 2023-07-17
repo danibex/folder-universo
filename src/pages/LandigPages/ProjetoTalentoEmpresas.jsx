@@ -16,6 +16,8 @@ import { useState } from 'react';
 import Formulario from '@/components/Formulario';
 import LogoWhatsapp from "@/components/LogoWhatsapp"
 import CardCurso from '@/components/CardCurso';
+import BotaoScroll from '@/components/BotaoScroll';
+import { Element } from 'react-scroll';
 const Breakpoints = {
   0: {
     slidesPerView: 1,
@@ -60,7 +62,7 @@ export default function Home() {
   return (
   <MenuNavegacao>
     <div className={`
-    h-full w-full flex flex-col items-center bg-[#054AA9]
+    h-full w-full flex flex-col items-center bg-[#122E72]
     `}>
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center
@@ -75,9 +77,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="mb-7 w-full flex justify-center items-center">
+      <BotaoScroll/>
+      </div>
+        
+  
       
-      <Formulario/>
-
       <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`} style={{fontFamily: "'Times New Roman', sans-serif"}}>
           <Swiper
             modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -258,255 +263,12 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             </div>
           </Swiper>
         </div>
-        
-{/*  */}
-      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
-      flex flex-col justify-center items-center
-      shadow-xl mb-14
-      `}>
-      <div className='w-full'>
-        <h2 className='font-medium text-center text-2xl mb-4 ml-2'>Galeria</h2>
-      </div>
-      {/* 
 
-       */}
-        <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
-          <Swiper
-            modules={[Navigation, Pagination, A11y, Autoplay]}
-            spaceBetween={10}
-            breakpoints={Breakpoints}
-            loop={true}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: true
-            }}
-          >
-            <div className="w-[100%] flex justify-center items-center">
-              <div className="w-[100%] flex items-center justify-center">
-              
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia1.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia2.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia3.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia4.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia5.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia6.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia7.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia8.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia9.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia10.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
+    <div className="mb-10 w-full flex justify-center items-center">
+      <BotaoScroll/>
+    </div>
 
-              </div>
-            </div>
-          </Swiper>
-        </div>
-
-      </div>
-{/*  */}
-
-{/* */}
-      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
-      flex flex-col justify-center items-center
-      shadow-xl mb-14
-      `}>
-      <div className='w-full'>
-        <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Atrativos</h2>
-      </div>
-      {/* 
-
-       */}
-        <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
-          <Swiper
-            modules={[Navigation, Pagination, A11y, Autoplay]}
-            spaceBetween={10}
-            breakpoints={Breakpoints}
-            loop={true}
-            autoplay={{
-              delay: 1750,
-              disableOnInteraction: false
-            }}
-          >
-            <div className="w-[100%] flex justify-center items-center">
-              <div className="w-[100%] flex items-center justify-center">
-                {/**<SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
-                    <iframe className='w-[330px] h-[400px] mt-3 rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.1379445407847!2d-38.47409963075295!3d-12.99104614562687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b47bf14dcdd%3A0x2750cc44b55f2a9c!2sUniverso%20Universidade%20Salgado%20de%20Oliveira%2C%20Universo%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1688062011381!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
-                      <div className='flex flex-col justify-center items-center mb-5'>
-                      <IconMapPinFilled className='text-red-600 mt-2' size={35}/>
-                      <div className="text-xl font-normal text-center mt-4">Uma das melhores localizações de Salvador</div>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                */}
-
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/grafico.jpeg" width={330} height={200} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-center items-center mb-5'>
-                      <IconBrandCashapp className='text-black mt-2' size={35}/>
-                      <div className="text-xl font-normal text-center mt-2">Os melhores preços da cidade</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/estacionamento.png" width={330} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-8'>
-                        <IconParking className='text-black' size={35}/>
-                        <div className="text-xl font-normal text-center mt-2">Amplo estacionamento</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/seloMec.png" width={150} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-8'>
-                        <div className='flex flex-row gap-1'>
-                        <IconStarFilled className='text-yellow-400' size={35}/>
-                        <IconStarFilled className='text-yellow-400' size={35}/>
-                        <IconStarFilled className='text-yellow-400' size={35}/>
-                        <IconStarFilled className='text-yellow-400' size={35}/>
-                        <IconStarFilled className='text-yellow-400' size={35}/>
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2">Cursos reconhecidos pelo MEC e com conceitos excelentes</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/jovensNaMesa.jpeg" width={300} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
-                        <div className='flex flex-row'>
-                        <IconSchool className='text-black' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2">Coordenadores de cursos acessíveis aos alunos</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/telemarketing.png" width={300} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
-                        <div className='flex flex-row'>
-                        <IconBrandWhatsapp className='text-green-500' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2">Canais de atendimentos aos alunos, inclusive por meio de whatsap</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/alunosNotebook.png" width={300} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
-                        <div className='flex flex-row'>
-                        <IconDeviceLaptop className='text-gray-700' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2">40% das disciplinas do curso são ministradas na modalidade à distância</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/palestra.png" width={300} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-5'>
-                        <div className='flex flex-row'>
-                        <IconMicrophone2 className='text-gray-700' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2">Atividades de extensão semestrais</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/partyOffice.png" width={300} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
-                        <div className='flex flex-row'>
-                        <IconBalloonFilled className='text-gray-700' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2 mx-1">Atividades e eventos lúdicos (Carnaval, São João, Halloween, etc)</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  
-                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
-                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/profissoes.png" width={250} height={300} alt='Foto representativa'/>
-                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
-                        <div className='flex flex-row'>
-                        <IconStethoscope className='text-gray-700' size={35}/> 
-                        </div>
-                        <div className="text-xl font-normal text-center mt-2 mx-1">Facilidade de ingresso no mercado de trabalho</div>
-                      </div>
-                    </div>
-                  </div>
-
-                </SwiperSlide>
- 
-
-              </div>
-            </div>
-          </Swiper>
-        </div>
-
-      </div>
-{/*  */}
+    {/*  */}
 <div className={`bg-white w-full mt-5 shadow-xl mb-14 relative`}>
 <Image src="/img/clique1.gif" className='absolute top-60 right-24 z-10' width={90} height={90} alt='Ponteiro do mouse'/>
         <h2 className={`text-center text-4xl font-medium text-red-700 my-5`}>Nossos Cursos</h2>
@@ -546,7 +308,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             loop={true}
             navigation
             autoplay={{
-              delay: 1500,
+              delay: 2500,
               disableOnInteraction: false
             }}
           >
@@ -655,7 +417,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             loop={false }
             navigation
             autoplay={{
-              delay: 1500,
+              delay: 2500,
               disableOnInteraction: false
             }}
           >
@@ -844,6 +606,269 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
           </Swiper>
         </div>
       </div>
+{/*  */}
+<div className="mb-7 w-full flex justify-center items-center">
+      <BotaoScroll/>
+    </div>
+
+      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+      flex flex-col justify-center items-center
+      shadow-xl mb-14
+      `}>
+      <div className='w-full'>
+        <h2 className='font-medium text-center text-2xl mb-4 ml-2'>Galeria</h2>
+      </div>
+      {/* 
+
+       */}
+        <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
+          <Swiper
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={10}
+            breakpoints={Breakpoints}
+            loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: true
+            }}
+          >
+            <div className="w-[100%] flex justify-center items-center">
+              <div className="w-[100%] flex items-center justify-center">
+              
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia1.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia2.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia3.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia4.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia5.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia6.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia7.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia8.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia9.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia10.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+
+              </div>
+            </div>
+          </Swiper>
+        </div>
+
+      </div>
+{/*  */}
+
+<div className="mb-7 w-full flex justify-center items-center">
+    <BotaoScroll/>
+</div>  
+
+{/* */}
+      <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
+      flex flex-col justify-center items-center
+      shadow-xl mb-14
+      `}>
+      <div className='w-full'>
+        <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Atrativos</h2>
+      </div>
+      {/* 
+
+       */}
+        <div className={`flex w-[100%] justify-center items-center mt-2 pb-8`}>
+          <Swiper
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={10}
+            breakpoints={Breakpoints}
+            loop={true}
+            autoplay={{
+              delay: 1750,
+              disableOnInteraction: false
+            }}
+          >
+            <div className="w-[100%] flex justify-center items-center">
+              <div className="w-[100%] flex items-center justify-center">
+                {/**<SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
+                    <iframe className='w-[330px] h-[400px] mt-3 rounded-xl' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1857.1379445407847!2d-38.47409963075295!3d-12.99104614562687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b47bf14dcdd%3A0x2750cc44b55f2a9c!2sUniverso%20Universidade%20Salgado%20de%20Oliveira%2C%20Universo%20Salvador!5e1!3m2!1spt-BR!2sbr!4v1688062011381!5m2!1spt-BR!2sbr" loading="lazy"></iframe>
+                      <div className='flex flex-col justify-center items-center mb-5'>
+                      <IconMapPinFilled className='text-red-600 mt-2' size={35}/>
+                      <div className="text-xl font-normal text-center mt-4">Uma das melhores localizações de Salvador</div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                */}
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/grafico.jpeg" width={330} height={200} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-center items-center mb-5'>
+                      <IconBrandCashapp className='text-black mt-2' size={35}/>
+                      <div className="text-xl font-normal text-center mt-2">Os melhores preços da cidade</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/estacionamento.png" width={330} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-8'>
+                        <IconParking className='text-black' size={35}/>
+                        <div className="text-xl font-normal text-center mt-2">Amplo estacionamento</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/seloMec.png" width={150} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-8'>
+                        <div className='flex flex-row gap-1'>
+                        <IconStarFilled className='text-yellow-400' size={35}/>
+                        <IconStarFilled className='text-yellow-400' size={35}/>
+                        <IconStarFilled className='text-yellow-400' size={35}/>
+                        <IconStarFilled className='text-yellow-400' size={35}/>
+                        <IconStarFilled className='text-yellow-400' size={35}/>
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2">Cursos reconhecidos pelo MEC e com conceitos excelentes</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/jovensNaMesa.jpeg" width={300} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
+                        <div className='flex flex-row'>
+                        <IconSchool className='text-black' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2">Coordenadores de cursos acessíveis aos alunos</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/telemarketing.png" width={300} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
+                        <div className='flex flex-row'>
+                        <IconBrandWhatsapp className='text-green-500' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2">Canais de atendimentos aos alunos, inclusive por meio de whatsap</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/alunosNotebook.png" width={300} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
+                        <div className='flex flex-row'>
+                        <IconDeviceLaptop className='text-gray-700' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2">40% das disciplinas do curso são ministradas na modalidade à distância</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/palestra.png" width={300} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-5'>
+                        <div className='flex flex-row'>
+                        <IconMicrophone2 className='text-gray-700' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2">Atividades de extensão semestrais</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/partyOffice.png" width={300} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
+                        <div className='flex flex-row'>
+                        <IconBalloonFilled className='text-gray-700' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2 mx-1">Atividades e eventos lúdicos (Carnaval, São João, Halloween, etc)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                  
+                  <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
+                    <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
+                    <Image className='rounded-lg mt-3' src="/img/profissoes.png" width={250} height={300} alt='Foto representativa'/>
+                      <div className='flex flex-col justify-star items-center mb-5 mt-1'>
+                        <div className='flex flex-row'>
+                        <IconStethoscope className='text-gray-700' size={35}/> 
+                        </div>
+                        <div className="text-xl font-normal text-center mt-2 mx-1">Facilidade de ingresso no mercado de trabalho</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </SwiperSlide>
+ 
+
+              </div>
+            </div>
+          </Swiper>
+        </div>
+
+      </div>
+
+      <div className="mb-14 w-full flex justify-center items-center">
+        <BotaoScroll/>
+        </div>
+
+    <Element name="formulario" className="formulario flex w-full justify-center items-center">
+        <Formulario/>
+    </Element>
     </div>
     <LogoWhatsapp/>
   </MenuNavegacao>
