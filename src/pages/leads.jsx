@@ -1,7 +1,7 @@
 import React from 'react'
 import { IconPencilMinus, IconTrash, IconArrowsExchange2 } from '@tabler/icons-react'
 import { useEffect, useState } from 'react';
-
+import {exportToXLS} from '@/components/exportarXSL';
 export default function leads() {
   const [leads, setLeads] = useState([])
   useEffect(() => {
@@ -10,8 +10,12 @@ export default function leads() {
       .then((data) => {
         setLeads(data)
         console.log(data)
-      })
-  }, [])
+      })  
+    }, [])
+
+    function exportToXLS() {
+      exportToXLS(leads);
+    }
 
   function deletarLead(id) {
     fetch(`api/leads?id=${id}`, {method: "DELETE"})
@@ -21,6 +25,7 @@ export default function leads() {
   return (
     <div className='flex flex-col justify-center items-center'>
       <h1 className='my-4'>Leads</h1>
+      <button onClick={() => exportToXLS}>Exportar</button>
       <table>
         <thead>
             <tr className='border border-black text-center font-medium bg-blue-400 text-white'>
