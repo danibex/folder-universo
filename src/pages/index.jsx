@@ -62,14 +62,11 @@ export default function Home() {
     <div className={`
     h-full w-full flex flex-col items-center bg-[#054AA9]
     `}>
-      
-
-
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center
       shadow-xl mb-14
       `}>
-        <iframe alt="Vídeo do youtube" className='w-[100%] h-[238px] rounded-xl' src="/videos/SaveTube.io-Nossa História - UNIVERSO.mp4" title="YouTube video player"></iframe>
+        <iframe alt="Vídeo do youtube" className='w-[100%] h-[238px] rounded-xl' src="https://www.youtube.com/embed/2IT-c20XMuY" title="YouTube video player"></iframe>
         <div className={`mt-5`}>
           <div className={`font-semibold `}>
                <p className='text-xl text-blue-500 italic'>“Não somos meros espectadores da história que vai passando aleatoriamente sem nossa interferência.”</p>
@@ -164,7 +161,7 @@ export default function Home() {
                     <div className='w-full'>
                     <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Valores</h2>
                     </div>
-                    <Image className='rounded-2xl' src="/img/excelenciaAcademica.png" width={500} height={300}  alt='Foto institucional'/>
+                    <Image className='rounded-2xl' src="/img/excelenciaAcademica.jpeg" width={500} height={300}  alt='Foto institucional'/>
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
                     O Centro Universitário UNIVERSO Salvador tem como base de sua gestão e formação profissional, valores éticos, morais, fraternos, de igualdade, liberdade e sustentabilidade. Busca constantemente alcançar a excelência acadêmica em todas as áreas de atuação, com uma visão inovadora e aberta a novas oportunidades.</p>
@@ -183,7 +180,7 @@ export default function Home() {
                     <div className='w-full'>
                     <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Objetivo</h2>
                     </div>
-                    <Image className='rounded-2xl' src="/img/mulherDeNegocios.png" width={500} height={300}  alt='Foto institucional'/>
+                    <Image className='rounded-2xl' src="/img/mulherDeNegocios.jpeg" width={500} height={300}  alt='Foto institucional'/>
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
                     Assumir o compromisso com a formação de profissionais cidadãos efetivamente engajados com as especificidades inerentes ao campo de atuação profissional e com a dimensão social circundante, respeitando os princípios éticos, os valores e visões de mundo que constituem a cultura local dos grupos e/ou comunidades atendidos. 
@@ -217,7 +214,7 @@ Primazia do bem comum,
                     <div className='w-full'>
                     <h2 className='font-medium text-left text-2xl mb-4 ml-2'>Projeto Talento Empresas</h2>
                     </div>
-                    <Image className='rounded-2xl' src="/img/reuniaoExecutiva.png" width={500} height={300}  alt='Foto institucional'/>
+                    <Image className='rounded-2xl' src="/img/reuniaoExecutiva.jpeg" width={500} height={300}  alt='Foto institucional'/>
                     <div className={`mt-5`}>
                     <p className={`font-medium text-justify`}>
                     O mercado de trabalho atual é bastante competitivo, porém muitos trabalhadores não possuem uma formação adequada. Ao mesmo tempo, sabemos que a formação superior dos funcionários é um excelente investimento para uma empresa. 
@@ -368,7 +365,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                   
                   <div href="/" className="justify-center items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
                     <div className="flex flex-col justify-between items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-1 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/grafico.png" width={330} height={200} alt='Foto representativa'/>
+                    <Image className='rounded-lg mt-3' src="/img/grafico.jpeg" width={330} height={200} alt='Foto representativa'/>
                       <div className='flex flex-col justify-center items-center mb-5'>
                       <IconBrandCashapp className='text-black mt-2' size={35}/>
                       <div className="text-xl font-normal text-center mt-2">Os melhores preços da cidade</div>
@@ -415,7 +412,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                   
                   <div href="/" className="justify-between items-center shadow-xl w-[350px]  h-[320px] bg-white flex flex-col border rounded-lg pb-0 hover:opacity-80 active:opacity-70">
                     <div className="flex flex-col justify-start items-center text-center rounded-lg mx-0 px-0 mt-0 pt-0 mb-0 h-[320px] w-[350px] shadow-lg">
-                    <Image className='rounded-lg mt-3' src="/img/jovensNaMesa.png" width={300} height={300} alt='Foto representativa'/>
+                    <Image className='rounded-lg mt-3' src="/img/jovensNaMesa.jpeg" width={300} height={300} alt='Foto representativa'/>
                       <div className='flex flex-col justify-star items-center mb-5 mt-1'>
                         <div className='flex flex-row'>
                         <IconSchool className='text-black' size={35}/> 
