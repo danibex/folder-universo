@@ -69,7 +69,7 @@ export default function Home() {
       flex flex-col justify-center items-center
       shadow-xl mb-14
       `}>
-        {/* <iframe alt="Vídeo do youtube" className='w-[100%] h-[238px] rounded-xl' src="/videos/SaveTube.io-Nossa História - UNIVERSO.mp4" title="YouTube video player"></iframe>*/}
+        <iframe alt="Vídeo do youtube" className='w-[100%] h-[238px] rounded-xl' src="/videos/SaveTube.io-Nossa História - UNIVERSO.mp4" title="YouTube video player"></iframe>
         <div className={`mt-5`}>
           <div className={`font-semibold `}>
                <p className='text-xl text-blue-500 italic'>“Não somos meros espectadores da história que vai passando aleatoriamente sem nossa interferência.”</p>
