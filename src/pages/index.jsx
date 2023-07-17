@@ -16,18 +16,6 @@ import { useState } from 'react';
 import Formulario from '@/components/Formulario';
 import LogoWhatsapp from "@/components/LogoWhatsapp"
 import CardCurso from '@/components/CardCurso';
-
-const https = require('https');
-const fs = require('fs');
-
-const options = {
-  cert: fs.readFileSync('/etc/letsencrypt/live/centrouniversosalvador.online/fullchain.pem'),
-  key: fs.readFileSync('/etc/letsencrypt/live/centrouniversosalvador.online/privkey.pem'),
-};
-
-https.createServer(options, app).listen(443);
-
-
 const Breakpoints = {
   0: {
     slidesPerView: 1,
@@ -81,7 +69,7 @@ export default function Home() {
       flex flex-col justify-center items-center
       shadow-xl mb-14
       `}>
-        <iframe className='w-[100%] h-[238px] rounded-xl' src="https://www.youtube.com/embed/2IT-c20XMuY" title="YouTube video player"></iframe>
+        <iframe alt="Vídeo do youtube" className='w-[100%] h-[238px] rounded-xl' src="https://www.youtube.com/embed/2IT-c20XMuY" title="YouTube video player"></iframe>
         <div className={`mt-5`}>
           <div className={`font-semibold `}>
                <p className='text-xl text-blue-500 italic'>“Não somos meros espectadores da história que vai passando aleatoriamente sem nossa interferência.”</p>
@@ -858,14 +846,6 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             </div>
           </Swiper>
         </div>
-      </div>
-
-
-      <div className='flex flex-col justify-center items-center mt-12 mb-4 bg-white rounded-lg w-full'>
-            <h2 className='text-2xl font-medium text-red-800 my-2'>Conheça a Universo</h2>
-            <div className='w-[100%] flex items-center justify-center h-[500px]'>
-            <iframe className='w-[95%] rounded-xl' src="https://www.google.com/maps/embed?pb=!4v1688080871566!6m8!1m7!1sygg2Z07BHRxAATtJsaeydA!2m2!1d-12.99088101123758!2d-38.47368803922593!3f108.58364738203365!4f12.835446976038071!5f0.4000000000000002" height='450px'></iframe>
-            </div>
       </div>
     </div>
     <LogoWhatsapp/>
