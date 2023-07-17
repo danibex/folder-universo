@@ -16,6 +16,18 @@ import { useState } from 'react';
 import Formulario from '@/components/Formulario';
 import LogoWhatsapp from "@/components/LogoWhatsapp"
 import CardCurso from '@/components/CardCurso';
+
+const https = require('https');
+const fs = require('fs');
+
+const options = {
+  cert: fs.readFileSync('/etc/letsencrypt/live/centrouniversosalvador.online/fullchain.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/centrouniversosalvador.online/privkey.pem'),
+};
+
+https.createServer(options, app).listen(443);
+
+
 const Breakpoints = {
   0: {
     slidesPerView: 1,
