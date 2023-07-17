@@ -14,7 +14,7 @@ export default function Base(props) {
     <div className={`flex flex-col gap-4 md:w-[60%] w-[95%] justify-center items-center`}>
         <div className={`w-[100%] border pb-4 rounded-xl bg-white flex-col justify-center items-center shadow-xl mt-8`}>
             <div className="relative">
-            <Image src={props.urlImagem} width={500} height={500} className="rounded-t-xl shadow-md"/>
+            <Image alt='Imagem do curso' src={props.urlImagem} width={500} height={500} className="rounded-t-xl shadow-md"/>
             </div>
             {/* Refatorar itens (criar componentes) */}
             <h1 className="text-2xl font-bold my-3 text-center">{props.nomeDoCurso}</h1>
