@@ -60,7 +60,7 @@ export default function Home() {
   return (
   <MenuNavegacao>
     <div className={`
-    h-full w-full flex flex-col items-center bg-[#054AA9]
+    h-full w-full flex flex-col items-center bg-[#122E72]
     `}>
       <div className={` w-[90%] bg-white mt-8 p-4 rounded-2xl
       flex flex-col justify-center items-center

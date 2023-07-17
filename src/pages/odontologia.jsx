@@ -10,6 +10,7 @@ export default function direito() {
         matrizCurricular="http://gradecurricular.universo.edu.br/19_309AN.pdf"
         urlImagem="/img/curso/odontologia.png"
         turno="Diurno / Noturno"
+        linkVideo="https://www.youtube.com/embed/FZCjsKrY3Uc"
     />
   )
 }

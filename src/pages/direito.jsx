@@ -10,6 +10,7 @@ export default function direito() {
         matrizCurricular="http://gradecurricular.universo.edu.br/19_206AN.pdf"
         urlImagem="/img/curso/direito.png"
         turno="Matutino / Noturno"
+        linkVideo="https://www.youtube.com/embed/coRfIc4EuVE"
     />
   )
 }

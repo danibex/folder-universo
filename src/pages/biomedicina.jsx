@@ -10,6 +10,9 @@ export default function direito() {
         matrizCurricular=""
         urlImagem="/img/curso/biomedicina.png"
         turno="Noturno"
+        linkVideo="https://www.youtube.com/embed/sXDJXdWUKj8"
     />
   )
 }
+
+// https://www.youtube.com/embed/sXDJXdWUKj8

@@ -8,13 +8,13 @@ export default function Base(props) {
   return (
     <MenuNavegacao>
     <div className={`
-    bg-gradient-to-r from-blue-200 to-red-300
+    bg-[#122E72]
     h-full w-full flex flex-col items-center
     `}>
     <div className={`flex flex-col gap-4 md:w-[60%] w-[95%] justify-center items-center`}>
-        <div className={`w-[100%] border pb-4 rounded-xl bg-white flex-col justify-center items-center shadow-xl mt-8`}>
-            <div className="relative">
-            <Image alt='Imagem do curso' src={props.urlImagem} width={500} height={500} className="rounded-t-xl shadow-md"/>
+        <div className={`w-[100%] max-w-[530px] border pb-4 rounded-xl bg-white flex-col justify-center items-center shadow-xl mt-8`}>
+            <div className="flex justify-center items-center">
+                <iframe className='rounded-t-xl border-[0px]' width="560" height="315" src={props.linkVideo} title="YouTube video player"></iframe>
             </div>
             {/* Refatorar itens (criar componentes) */}
             <h1 className="text-2xl font-bold my-3 text-center">{props.nomeDoCurso}</h1>

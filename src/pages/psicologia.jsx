@@ -10,6 +10,7 @@ export default function psicologia() {
         matrizCurricular="http://gradecurricular.universo.edu.br/19_310AN.pdf"
         urlImagem="/img/curso/psicologia.png"
         turno="Noturno"
+        linkVideo="https://www.youtube.com/embed/xKfQE9Bs8Iw"
     />
   )
 }

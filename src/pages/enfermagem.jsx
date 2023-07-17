@@ -10,6 +10,7 @@ export default function direito() {
         matrizCurricular="http://gradecurricular.universo.edu.br/19_306AN.pdf"
         urlImagem="/img/curso/enfermagem.png"
         turno="Noturno"
+        linkVideo="https://www.youtube.com/embed/fVXLMJ1Bb6Y"
     />
   )
 }

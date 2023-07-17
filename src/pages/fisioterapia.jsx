@@ -10,6 +10,7 @@ export default function direito() {
         matrizCurricular="http://gradecurricular.universo.edu.br/19_303AN.pdf"
         urlImagem="/img/curso/fisioterapia.png"
         turno="Matutino / Noturno"
+        linkVideo="https://www.youtube.com/embed/svK6MI45mLk"
     />
   )
 }
