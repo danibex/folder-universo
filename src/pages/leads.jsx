@@ -1,7 +1,8 @@
 import React from 'react'
 import { IconPencilMinus, IconTrash, IconArrowsExchange2 } from '@tabler/icons-react'
 import { useEffect, useState } from 'react';
-import {exportToXLS} from '@/components/exportarXSL';
+import { CSVLink } from 'react-csv';
+import Image from 'next/image';
 export default function leads() {
   const [leads, setLeads] = useState([])
   useEffect(() => {
@@ -13,19 +14,27 @@ export default function leads() {
       })  
     }, [])
 
-    function exportToXLS() {
-      exportToXLS(leads);
-    }
-
   function deletarLead(id) {
     fetch(`api/leads?id=${id}`, {method: "DELETE"})
       .then((response) => response.json)
   }
+  
+  const headers = [
+    { label: "ID", key: "id" },
+    { label: "Nome Completo", key: "nome" },
+    { label: "Email", key: "email" },
+    { label: "Telefone", key: "telefone" },
+    { label: "Modalidade", key: "modalidade" },
+    { label: "Curso", key: "nome_curso" },
+    { label: "Empresa (opcional)", key: "empresa" },
+    { label: "Data de Inscrição", key: "data_inscricao" }
+  ];
 
   return (
     <div className='flex flex-col justify-center items-center'>
-      <h1 className='my-4'>Leads</h1>
-      <button onClick={() => exportToXLS}>Exportar</button>
+      <div className='flex items-start ml-72 my-4 w-full'>
+      <CSVLink data={leads} headers={headers} separator={";"} filename={ "Candidatos Cadastrados.csv" } ><Image className='' src="/excelIcon.png" alt='Icone do Excel' width={50} height={50}/></CSVLink>
+      </div>
       <table>
         <thead>
             <tr className='border border-black text-center font-medium bg-blue-400 text-white'>
