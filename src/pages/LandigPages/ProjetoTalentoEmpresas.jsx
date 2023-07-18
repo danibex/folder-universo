@@ -636,6 +636,21 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
               <div className="w-[100%] flex items-center justify-center">
               
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/anatomia.png" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/auditorio.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/biblioteca.png" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/CDO.png" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/estacionamento.jpg" width={400} height={400} alt='Foto do curso'/>
+                </SwiperSlide>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia1.jpg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
@@ -645,25 +660,19 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia3.jpg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia4.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/juriSimulado.jpg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia5.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/laboratorioEnfermagem.jpeg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia6.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/laboratorioInformatica.png" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia7.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/NAPS.jpg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
                 <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia8.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia9.jpg" width={400} height={400} alt='Foto do curso'/>
-                </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia10.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <Image className='rounded-xl w-[100%]' src="/img/galeria/salaDeAula.jpg" width={400} height={400} alt='Foto do curso'/>
                 </SwiperSlide>
 
               </div>
