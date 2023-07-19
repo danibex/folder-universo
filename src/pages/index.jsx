@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import CardCurso from '@/components/CardCurso';
+import ProjetoTalentoEmpresas from "@/pages/LandigPages/ProjetoTalentoEmpresas"
 export default function index() {
   const [toggle, setToggle] = useState(false);
   const toggleMenu = () => {
@@ -35,7 +36,8 @@ export default function index() {
     },
   };
   return (
-    <div>
+    <>
+    {/* <div>
       <div className='flex flex-row p-2 justify-between items-center'>
         <Link href="/" className='flex items-center justify-center'><Image alt='Logo Centro Universo Salvador' className='mt-5' style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}} src="/img/centroUniversoSalvador2.png" width={310} height={50}/></Link>
         <button onClick={() => { toggleMenu() }}>{toggle ? <IconX size={50} /> : <IconMenu2 size={50} />}</button>
@@ -89,6 +91,8 @@ export default function index() {
           </div>
         </div>
       </div>
-    </div>
+    </div>*/} 
+    <ProjetoTalentoEmpresas/>
+    </>
   )
 }
