@@ -210,3 +210,32 @@ Peço desculpas pela omissão. Na configuração do Nginx, é necessário criar 
    ```
 
 Agora o Nginx está configurado corretamente para encaminhar as solicitações para o PM2, que está executando seu projeto Next.js. Certifique-se de substituir `seu_dominio.com` pelo seu domínio ou endereço IP da VPS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE chamados (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(150),
+    email VARCHAR(100),
+    titulo VARCHAR(150),
+    descricao TEXT,
+    status VARCHAR(20),
+	data_entrega VARCHAR(15),
+    data_abertura TIMESTAMPTZ DEFAULT timezone('America/Bahia'::text, now())
+);
+
+select * from chamados;

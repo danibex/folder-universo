@@ -39,6 +39,9 @@ export default function chamado() {
                         <input className='text-xl p-2 rounded-md mb-4' type='text' placeholder='Título'/>
                         <textarea className='h-[200px] text-lg p-2 rounded-lg' placeholder='Descrição detalhada!'/>
                     </div>
+                    <div className='flex justify-end m-4'>
+                        <button className='p-2 border border-white rounded-lg text-lg font-medium text-white bg-green-700'>Abrir Chamado</button>
+                    </div>
                 </div>
             </div>
             <div className='w-[50%] flex flex-col justify-center items-center'>
