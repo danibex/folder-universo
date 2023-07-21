@@ -51,9 +51,10 @@ CREATE TABLE leads (
     email VARCHAR(100),
     telefone VARCHAR(15),
     modalidade VARCHAR(20),
+    nome_curso VARCHAR(100),
     curso VARCHAR(50),
     empresa VARCHAR(100),
-    data_hora TIMESTAMPTZ DEFAULT timezone('America/Bahia'::text, now())
+    data_inscricao TIMESTAMPTZ DEFAULT timezone('America/Bahia'::text, now())
 );
 
    ```
