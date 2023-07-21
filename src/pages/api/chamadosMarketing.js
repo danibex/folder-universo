@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       case "GET":
         const result = await pool.query('SELECT * FROM chamados');
         const usuarios = result.rows
-        res.status(200).json(usuarios); 
+        res.status(200).send(usuarios); 
         break;
       case "POST":
         const { nome, email, data_entrega, titulo, descricao, status} = req.body;

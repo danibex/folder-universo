@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { IconPointFilled } from '@tabler/icons-react'
 export default function chamado() {
+    const [chamados, setChamados] = useState([]);
+    const chamadoBase = {
+        nome: "", 
+        email: "", 
+        data_entrega: "", 
+        titulo: "", 
+        descricao: "", 
+        status: "esperando"
+    }
+    useEffect(() => {
+      fetch(`/api/chamadosMarketing`)
+        .then((response) => response.json())
+        .then((data) => {
+          setChamados(data);
+          console.log(data); // Verifique os dados reais retornados pela API
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }, []);
+
+    const [chamado, setChamado] = useState(chamadoBase)
+    function enviar() {
+        fetch("/api/chamadosMarketing", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(chamado),
+        })}
+
   return (
     <div className='px-5 pt-5 pb-20 bg-slate-200'>
       <div>
@@ -28,19 +59,19 @@ export default function chamado() {
                 <h1 className='text-4xl font-medium text-blue-800'>Novo Chamado</h1>
                 <div className=''>
                     <div className='flex flex-row items-center justify-around my-4'>
-                        <input className='text-xl p-2 rounded-md' type='text' placeholder='Seu Nome'/>
-                        <input className='text-xl p-2 rounded-md' type='text' placeholder='E-mail'/>
+                        <input onChange={(e) => {setChamado({...chamado, nome: e.target.value})}} className='text-xl p-2 rounded-md' type='text' placeholder='Nome'/>
+                        <input onChange={(e) => {setChamado({...chamado, email: e.target.value})}} className='text-xl p-2 rounded-md' type='text' placeholder='E-mail'/>
                         <div className='flex flex-row items-center justify-center'>
                             <label className='mr-4 text-lg'>Entrega</label>
-                            <input className='text-2xl p-2 rounded-lg' type='date' placeholder='Limite de entrega'/>
+                            <input onChange={(e) => {setChamado({...chamado, data_entrega: e.target.value})}} className='text-2xl p-2 rounded-lg' type='date' placeholder='Limite de entrega'/>
                         </div>
                     </div>
                     <div className='flex flex-col'>
-                        <input className='text-xl p-2 rounded-md mb-4' type='text' placeholder='Título'/>
-                        <textarea className='h-[200px] text-lg p-2 rounded-lg' placeholder='Descrição detalhada!'/>
+                        <input onChange={(e) => {setChamado({...chamado, titulo: e.target.value})}} className='text-xl p-2 rounded-md mb-4' type='text' placeholder='Título'/>
+                        <textarea onChange={(e) => {setChamado({...chamado, descricao: e.target.value})}} className='h-[200px] text-lg p-2 rounded-lg' placeholder='Descrição detalhada!'/>
                     </div>
                     <div className='flex justify-end m-4'>
-                        <button className='p-2 border border-white rounded-lg text-lg font-medium text-white bg-green-700'>Abrir Chamado</button>
+                        <button onClick={() => {enviar(); window.location.reload();}} className='p-2 border border-white rounded-lg text-lg font-medium text-white bg-green-700'>Abrir Chamado</button>
                     </div>
                 </div>
             </div>
@@ -50,23 +81,19 @@ export default function chamado() {
                 <table className='w-[100%]'>
                     <thead className='w-[100%]'>
                         <tr className='w-[100%] flex justify-between text-xl font-medium text-blue-600'>
-                            <td className='text-center px-5 py-2'>Título</td>
+                            <td className='text-center px-5 py-2'>Projeto</td>
                             <td className='text-right px-5 py-2'>Status</td>
                         </tr>
                     </thead>
                     <tbody className='flex w-full flex-col justify-center items-center'>
-                        <tr className='w-[100%] flex justify-between mx-2 items-center'>
-                            <td className='text-center px-5 py-2 text-lg'>Folder Universo</td>
-                            <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`text-red-600`}/></td>
-                        </tr>
-                        <tr className='w-[100%] flex justify-between mx-2 items-center'>
-                            <td className='text-center px-5 py-2 text-lg'>Folder Universo</td>
-                            <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`text-yellow-600`}/></td>
-                        </tr>
-                        <tr className='w-[100%] flex justify-between mx-2 items-center'>
-                            <td className='text-center px-5 py-2 text-lg'>Folder Universo</td>
-                            <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`text-green-600`}/></td>
-                        </tr>
+                        {chamados.map((chamado) => {
+                            return(
+                            <tr key={chamado.id} className='w-[100%] flex justify-between mx-2 items-center'>
+                                <td className='text-center px-5 py-2 text-lg'>{chamado.titulo}</td>
+                                <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`text-red-600`}/></td>
+                            </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
                 </div>
