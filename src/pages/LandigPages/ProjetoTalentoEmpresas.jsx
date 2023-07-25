@@ -635,44 +635,83 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
             <div className="w-[100%] flex justify-center items-center">
               <div className="w-[100%] flex items-center justify-center">
               
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
-                      <Image className='rounded-xl w-[100%]' src="/img/galeria/anatomia.png" width={400} height={400} alt='Foto do curso'/>
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center", height: "410px"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
+                        <Image className='rounded-xl w-[100%]' src="/img/galeria/anatomia.png" width={400} height={400} alt='Foto do curso'/>
+                        <h3 className='text-2xl font-medium'>Laboratório de Anatomia</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/auditorio.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Auditório</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/biblioteca.png" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Biblioteca</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/CDO.png" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Clínica de Odontologia</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/estacionamento.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Estacionamento</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia1.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Laboratório de Fisioterapia</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia2.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Laboratório de Fisioterapia</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/fisioterapia3.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Laboratório de Fisioterapia</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/juriSimulado.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Juri Simulado</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/laboratorioEnfermagem.jpeg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Laboratório de Enfermagem</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/laboratorioInformatica.png" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Laboratório de Informática</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/NAPS.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Núcleo Psicosocial</h3>
+                  </div>
                 </SwiperSlide>
-                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>         
+                <SwiperSlide style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                   <div className='flex flex-col justify-around items-center w-[100%] h-[410px]'>         
                       <Image className='rounded-xl w-[100%]' src="/img/galeria/salaDeAula.jpg" width={400} height={400} alt='Foto do curso'/>
+                      <h3 className='text-2xl font-medium'>Sala de Aula</h3>
+                  </div>
                 </SwiperSlide>
 
               </div>
