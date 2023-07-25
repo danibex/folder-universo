@@ -325,7 +325,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
                           </div>
                           <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
+                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
                           </div>
                         </div>
                     </div>
@@ -371,7 +371,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
                           </div>
                           <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
+                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
                           </div>
                         </div>
                     </Link>
@@ -385,7 +385,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
                           </div>
                           <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
+                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
                           </div>
                         </div>
                     </Link>
@@ -399,7 +399,7 @@ O Centro Universitário UNIVERSO Salvador foi credenciado </p>
                             <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>Matutino / Noturno</p>
                           </div>
                           <div className={'rounded m-1 flex flex-row justify-center items-center'}>
-                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>10 Semestres / 5 Anos</p>
+                            <p className={`font-medium text-blue-500 rounded-xl m-1 p-2 border border-blue-500`}>8 Semestres / 4 Anos</p>
                           </div>
                         </div>
                     </Link>
