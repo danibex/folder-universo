@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       case "GET":
         const result = await pool.query('SELECT * FROM chamados');
         const usuarios = result.rows
-        res.status(200).json(usuarios); 
+        res.status(200).send(usuarios); 
         break;
       case "POST":
         const { nome, email, data_entrega, titulo, descricao, status} = req.body;
@@ -31,13 +31,13 @@ export default async function handler(req, res) {
       case "DELETE":
         try{
           const deleteRow = await pool.query(
-            'DELETE FROM leads WHERE id = $1;',
+            'DELETE FROM chamados WHERE id = $1;',
             [parseInt(req.query.id)]
           );
           res.status(200).json(`Usuário id = ${parseInt(req.query.id)} deletado`)
         } catch (error) {
           console.error(error);
-          res.status(500).json({ message: 'Erro ao deletar usuário' });
+          res.status(500).json({ message: 'Erro ao deletar chamado' });
         }
         break;
       default:
