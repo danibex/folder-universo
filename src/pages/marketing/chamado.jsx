@@ -44,15 +44,17 @@ export default function chamado() {
         <div className='flex items-center justify-center w-full'>
             <hr className='border w-[95%]'/>
         </div>
-        <div className='flex flex-row w-[100%]'>
-            <div className='mt-4 w-[50%]'>
+        <div className='flex flex-col lg:flex-row w-[100%]'>
+            <div className='mt-4 w-full lg:w-[50%]'>
                 <h1 className='text-4xl font-medium text-blue-800'>Novo Chamado</h1>
                 <div className=''>
-                    <div className='flex flex-row items-center justify-around my-4'>
-                        <input onChange={(e) => {setChamado({...chamado, nome: e.target.value})}} className='text-xl p-2 rounded-md' type='text' placeholder='Nome'/>
-                        <input onChange={(e) => {setChamado({...chamado, email: e.target.value})}} className='text-xl p-2 rounded-md' type='text' placeholder='E-mail'/>
-                        <div className='flex flex-row items-center justify-center'>
-                            <label className='mr-4 text-lg'>Entrega</label>
+                    <div className='flex flex-col lg:flex-row w-full items-center justify-center my-4'>
+                        <div className=' flex flex-col justify-around w-full'>
+                            <input onChange={(e) => {setChamado({...chamado, nome: e.target.value})}} className='my-2 w-full text-xl p-2 rounded-lg' type='text' placeholder='Nome'/>
+                            <input onChange={(e) => {setChamado({...chamado, email: e.target.value})}} className='my-2 w-full text-xl p-2 rounded-md' type='text' placeholder='E-mail'/>
+                        </div>
+                        <div className='my-2 flex flex-col items-center justify-center w-full m-2'>
+                            <label className='mr-4 text-xl my-2'>Data de Entrega</label>
                             <input onChange={(e) => {setChamado({...chamado, data_entrega: e.target.value})}} className='text-2xl p-2 rounded-lg' type='date' placeholder='Limite de entrega'/>
                         </div>
                     </div>
@@ -65,7 +67,7 @@ export default function chamado() {
                     </div>
                 </div>
             </div>
-            <div className='w-[50%] flex flex-col justify-center items-center'>
+            <div className=' w-full lg:w-[50%] flex flex-col justify-center items-center'>
                 <h1 className='text-4xl font-medium text-blue-800 p-4'>Lista de Chamados</h1>
                 <div className='bg-white w-[90%] rounded-lg h-[350px] overflow-y-scroll'>
                 <table className='w-[100%]'>
