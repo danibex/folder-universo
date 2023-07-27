@@ -25,14 +25,14 @@ export default async function handler(req, res) {
         }
         break;
         case "PUT":
-          {/*console.log("Tratando requisição PUT (ou UPDATE)");
-          const { nome, email, data_entrega, titulo, descricao, status } = req.body;
-          const id = idParam.id; // Supondo que o parâmetro da URL seja 'id'
+          console.log("Tratando requisição PUT (ou UPDATE)");
+          const { nomeNovo, emailNovo, tituloNovo, descricaoNova, statusNovo } = req.body;
+          const id = req.query.id; // Supondo que o parâmetro da URL seja 'id'
     
           try {
             const updateResult = await pool.query(
               'UPDATE chamados SET nome = $1, email = $2, data_entrega = $3, titulo = $4, descricao = $5, status = $6 WHERE id = $7',
-              [nome, email, data_entrega, titulo, descricao, status, id]
+              [nomeNovo, emailNovo, tituloNovo, descricaoNova, statusNovo, id]
             );
     
             res.status(200).json({ message: 'Chamado atualizado com sucesso' });
@@ -40,7 +40,7 @@ export default async function handler(req, res) {
             console.error(error);
             res.status(500).json({ message: 'Erro ao atualizar chamado' });
           }
-          break;*/}
+          break;
       case "DELETE":
         try{
           const deleteRow = await pool.query(

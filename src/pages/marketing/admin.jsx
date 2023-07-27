@@ -7,10 +7,8 @@ import { ColorRing } from 'react-loader-spinner';
 
 export default function admin() {
   const [chamados, setChamados] = useState([]);
-  const [popUp, setPopUp] = useState(true)
+  const [popUp, setPopUp] = useState(false)
   const [chamado, setChamado] = useState({})
-
-
 
   useEffect(() => {
     fetch(`/api/chamadosMarketing`)
@@ -26,6 +24,17 @@ export default function admin() {
 
   function deletarChamado(id) {
     fetch(`/api/chamadosMarketing?id=${id}`, {method: "DELETE"})
+      .then((response) => response.json)
+  }
+
+  function atualizarChamado(id) {
+    fetch(`/api/atualizacaoChamado?id=${id}`, {
+      method: "PUT", 
+      body: JSON.stringify(chamado), 
+      headers: {
+      'Content-Type': 'application/json'
+      }
+    })
       .then((response) => response.json)
   }
 
@@ -75,11 +84,11 @@ export default function admin() {
             <div className='flex flex-row'>
               <div className='mx-2'>
                 <p>Nome:</p>
-                <input className='p-2' type='text' value={chamado.nome}/>
+                <input onChange={(e) => {setChamado({...chamado, nome: e.target.value})}} className='p-2' type='text' value={chamado.nome}/>
               </div>
               <div className='mx-2'> 
                 <p>E-mail:</p>
-                <input className='p-2' type='text' value={chamado.email}/>
+                <input onChange={(e) => {setChamado({...chamado, email: e.target.value})}} className='p-2' type='text' value={chamado.email}/>
               </div>
             </div>
             <div className='flex flex-row justify-between m-2 '>
@@ -95,7 +104,7 @@ export default function admin() {
               </div>
               <div className='flex flex-row justify-center items-center'>
                 <p className='text-black mr-2'>Status:</p>
-                <select className='p-2'>
+                <select onChange={(e) => {setChamado({...chamado, status: e.target.value});}} className='p-2'>
                   <option className='text-black'>Alterar</option>
                   <option className='text-red-600' value="esperando">Esperando</option>
                   <option className='text-yellow-600' value="em andamento">Em Andamento</option>
@@ -105,15 +114,15 @@ export default function admin() {
             </div>
             <div className='w-full flex flex-col justify-start my-2'>
               <p>Título:</p>
-              <input className='p-2' type='text' value={chamado.titulo}/>
+              <input onChange={(e) => {setChamado({...chamado, titulo: e.target.value})}} className='p-2' type='text' value={chamado.titulo}/>
             </div>
             <div className='w-full flex flex-col justify-start my-2'>
               <p>Descrição:</p>
-              <textarea className='h-[200px]' type='textarea' value={chamado.descricao}/>
+              <textarea onChange={(e) => {setChamado({...chamado, descricao: e.target.value})}} className='h-[200px]' type='textarea' value={chamado.descricao}/>
             </div>
             <div className='flex flex-row justify-end items-end my-3 font-medium'>
               <button onClick={() => setPopUp(false)} className='px-4 py-2 border border-black mx-1 rounded-lg bg-orange-600 text-white'>Cancelar</button>
-              <button className='px-4 py-2 border border-black mx-1 rounded-lg bg-green-700 text-white'>Salvar</button>
+              <button onClick={() => {atualizarChamado(chamado.id); {window.location.reload();}}} className='px-4 py-2 border border-black mx-1 rounded-lg bg-green-700 text-white'>Salvar</button>
             </div>
           </div>
         </div>

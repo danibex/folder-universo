@@ -82,7 +82,7 @@ export default function chamado() {
                             return(
                             <tr key={chamado.id} className='w-[100%] flex justify-between mx-2 items-center'>
                                 <td className='text-center px-5 py-2 text-lg'>{chamado.titulo}</td>
-                                <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`text-red-600`}/></td>
+                                <td className='text-right px-5 py-2'><IconPointFilled size={30} className={`${chamado.status == "esperando" ? "text-red-600" : ""} ${chamado.status == "em andamento" ? "text-yellow-600" : ""} ${chamado.status == "concluido" ? "text-green-600" : ""}`}/></td>
                             </tr>
                             )
                         })}
