@@ -95,7 +95,7 @@ export default function admin() {
               <div className='flex flex-col'>
                 <div className='flex flex-row text-green-600'>
                   <p className='mr-2'>Data de Abertura:</p>
-                  <p>{chamado.data_entrega}</p>
+                  <p>{chamado.data_abertura.slice(0,10)}</p>
                 </div>
                 <div className='flex flex-row text-red-600'>
                   <p className='mr-2'>Data de entrega:</p>
