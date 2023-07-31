@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Papa from 'papaparse';
+import csv from 'fast-csv';
 
 const Upload = () => {
   const [data, setData] = useState('');
@@ -9,27 +9,22 @@ const Upload = () => {
     setData(value);
   };
 
-  const processCSVToObject = () => {
-    Papa.parse(data, {
-      complete: function (results) {
-        const csvData = results.data;
-        const headers = csvData[0]; // Assuming the first row contains the column headers
-        const objectsArray = [];
+  const processData = () => {
+    const objectsArray = [];
 
-        for (let i = 1; i < csvData.length; i++) {
-          const object = {};
-          for (let j = 0; j < headers.length; j++) {
-            object[headers[j]] = csvData[i][j];
-          }
-          objectsArray.push(object);
-        }
-
+    csv
+      .parseString(data, {
+        headers: true, // Assuming the first row contains the column headers
+        skipEmptyLines: true, // Skip empty lines if any
+      })
+      .on('data', (row) => {
+        objectsArray.push(row);
+      })
+      .on('end', () => {
         console.log(objectsArray);
         // Here, you have the array of objects representing each row of the CSV.
         // You can use this "objectsArray" for further processing or display in your application.
-      },
-      header: true,
-    });
+      });
   };
 
   return (
@@ -37,13 +32,16 @@ const Upload = () => {
       <textarea
         value={data}
         onChange={handleDataChange}
-        placeholder="Paste CSV data here..."
+        placeholder="Cole os dados da planilha aqui..."
         rows="10"
         cols="50"
       />
-      <button onClick={processCSVToObject}>Process CSV</button>
+      <button onClick={processData}>Processar Dados</button>
     </div>
   );
 };
 
 export default Upload;
+
+
+// youtube.com/watch?v=zVlm_zUfitE
