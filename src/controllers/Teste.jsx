@@ -16,29 +16,11 @@ const Upload = () => {
       const [nome, numero] = linha.trim().split(/\s+/);
       return { nome, numero };
     });
+    setData(objetos)
     console.log(objetos);
-
-  /*  const objectsArray = [];
-
-    csv
-      .parseString(data, {
-        headers: true, // Assuming the first row contains the column headers
-        skipEmptyLines: true, // Skip empty lines if any
-      })
-      .on('data', (row) => {
-        objectsArray.push(row);
-      })
-      .on('end', () => {
-        console.log(objectsArray);
-        // Here, you have the array of objects representing each row of the CSV.
-        // You can use this "objectsArray" for further processing or display in your application.
-      }); */
   };
 
-  useEffect(()=>{
-    console.log(data)
-  }, [data])
-
+  
   return (
     <div>
       <textarea
