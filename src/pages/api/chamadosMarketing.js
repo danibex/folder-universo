@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         res.status(200).send(usuarios); 
         break;
       case "POST":
-        const { nome, email, data_entrega, titulo, descricao, status} = req.body;
+        const { nome, email, data_entrega, titulo, descricao, status } = req.body;
         try {
           const insertResult = await pool.query(
             'INSERT INTO chamados (nome, email, data_entrega, titulo, descricao, status) VALUES ($1, $2, $3, $4, $5, $6)',
