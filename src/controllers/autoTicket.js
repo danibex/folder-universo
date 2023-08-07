@@ -28,7 +28,9 @@ const client = new Client({
     
     const mensagens = [
       { numero: "557186384879@c.us", mensagem: "Daniel2" },
-      { numero: "557191402207@c.us", mensagem: "Testando2" }
+      { numero: "557191402207@c.us", mensagem: "Testando2" },
+      { numero: "557191026324@c.us", mensagem: "Mensagem Teste" }
+
       // Adicione mais objetos ao array 'mensagens' para enviar mais mensagens
     ];
   
