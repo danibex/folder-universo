@@ -40,8 +40,8 @@ const Upload = () => {
   };
 
   return (
-    <div className='w-full flex justify-center items-center bg-[#112D6F]'>
-      <div className='flex flex-col items-center justify-center w-[70%] py-10 bg-white'>
+    <div className='w-full h-[800px] flex justify-center items-center bg-[#112D6F]'>
+      <div className='flex flex-col items-center justify-center w-[70%] py-10 bg-white rounded-xl'>
       <div className='flex justify-end items-center mx-4'><Image alt='Logo Centro Universo Salvador' className='mt-5' style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}} src="/img/centroUniversoSalvador2.png" width={310} height={50}/></div>
         <div className='flex flex-col items-center justify-center py-4'>
           <h2 className='text-2xl py-2'>Mensagem</h2>

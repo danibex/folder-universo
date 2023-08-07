@@ -33,7 +33,7 @@ export default async function handler(req, res) {
           for (const dados of dataTratadaArray) {
             client.sendMessage(`55${dados.numero}@c.us`, mensagem)
               .then((messagem) => {
-                console.log('Mensagem enviada com sucesso:', messagem);
+                console.log('Mensagem enviada com sucesso:', messagem.to);
               })
               .catch((error) => {
                 console.error('Erro ao enviar mensagem:', error);
