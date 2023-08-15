@@ -1,4 +1,5 @@
 @echo off
 cd /d C:\Users\Francis\Documents\Daniel\folder-universo
-npm start
+start npm start
+start http://localhost:3000/autoticket
 pause
