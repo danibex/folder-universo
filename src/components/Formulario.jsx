@@ -115,6 +115,7 @@ export default function Formulario() {
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}
+            className="mr-1"
             /> :
             <IconRocket size={40} className="mr-1"/>
             }
