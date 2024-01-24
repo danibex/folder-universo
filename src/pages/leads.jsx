@@ -46,7 +46,6 @@ export default function leads() {
                 <td className='border border-black'>Cruso</td>
                 <td className='border border-black'>Empresa</td>
                 <td className='border border-black'>Data</td>
-                <td className='border border-black'>Hora</td>
                 <td className='border border-black'>Ações</td>
             </tr>
         </thead>
@@ -62,7 +61,6 @@ export default function leads() {
                   <td className='py-2 px-4 border border-black'>{lead.nome_curso}</td>
                   <td className='py-2 px-4 border border-black'>{lead.empresa}</td>
                   <td className='py-2 px-4 border border-black text-center'>{lead.data_inscricao.slice(0, 10)}</td>
-                  <td className='py-2 px-4 border border-black text-center'>{lead.data_inscricao.slice(11, 16)}</td>
                   <td className='py-2 px-4 border border-black'>
                      <button onClick={() => {deletarLead(lead.id); window.location.reload();} } className=' border border-black mx-1 rounded-lg hover:bg-red-700 active:bg-red-800 bg-red-600 font-medium text-white py-1 px-2'><IconTrash size={18}/></button>
                   </td>
